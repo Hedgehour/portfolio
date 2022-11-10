@@ -1,0 +1,12 @@
+{
+  "configurations": [
+    {
+      "name": "Start Web",
+      "request": "launch",
+      "runtimeArgs": ["start:web", "--inspect"],
+      "runtimeExecutable": "yarn",
+      "skipFiles": ["<node_internals>/**"],
+      "type": "node"
+    }
+  ]
+}

@@ -1,4 +1,5 @@
 import './app/app.element.ts';
+import './components';
 
 const handleClick = (event: MouseEvent) => {
   console.log('success');

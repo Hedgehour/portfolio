@@ -5,4 +5,4 @@ export class CardElement extends HTMLElement {
     this.classList.add('card');
   }
 }
-customElements.define('ui-card', CardElement);
+customElements.define('hedge-card', CardElement);

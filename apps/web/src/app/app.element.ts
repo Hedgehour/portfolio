@@ -1,3 +1,4 @@
+import { CardElement } from '../components/card';
 import './app.element.css';
 
 export class AppElement extends HTMLElement {
@@ -17,6 +18,9 @@ export class AppElement extends HTMLElement {
         </div>
       </div>
     </div>`;
+
+    // this.card = new CardElement();
+    // this.appendChild(this.card);
   }
 }
 customElements.define('portfolio-root', AppElement);

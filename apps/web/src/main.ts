@@ -1,5 +1,5 @@
-import './app/app.element.ts';
-import './components';
+import './app/app.elementa';
+import './components/card';
 
 const handleClick = (event: MouseEvent) => {
   console.log('success');

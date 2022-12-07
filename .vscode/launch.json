@@ -6,7 +6,8 @@
       "runtimeArgs": ["start:web", "--inspect"],
       "runtimeExecutable": "yarn",
       "skipFiles": ["<node_internals>/**"],
-      "type": "node"
+      "type": "node",
+      "console": "integratedTerminal"
     }
   ]
 }

@@ -1,15 +1,15 @@
-import './app/app.elementa';
-import './components/card';
+import './app/app.element';
+import './components/section';
 
-const handleClick = (event: MouseEvent) => {
-  console.log('success');
-  console.log('event: ', event);
-  alert('success!!');
-};
+// const handleClick = (event: MouseEvent) => {
+//   console.log('success');
+//   console.log('event: ', event);
+//   alert('success!!');
+// };
 
-const main = () => {
-  const button = document.getElementById('click-me-button');
-  button.addEventListener('click', (e) => handleClick(e));
-};
+// const main = () => {
+//   const button = document.getElementById('click-me-button');
+//   button.addEventListener('click', (e) => handleClick(e));
+// };
 
-window.onload = main;
+// window.onload = main;

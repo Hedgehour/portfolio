@@ -8,6 +8,15 @@
       "skipFiles": ["<node_internals>/**"],
       "type": "node",
       "console": "integratedTerminal"
+    },
+    {
+      "name": "Start React",
+      "request": "launch",
+      "runtimeArgs": ["start:react", "--inspect"],
+      "runtimeExecutable": "yarn",
+      "skipFiles": ["<node_internals>/**"],
+      "type": "node",
+      "console": "integratedTerminal"
     }
   ]
 }

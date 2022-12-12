@@ -1,0 +1,10 @@
+.section {
+  display: flex;
+  top: 0;
+  cursor: default;
+}
+.footer {
+  background-color: #282c34;
+  color: white;
+  text-align: center;
+}

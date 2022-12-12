@@ -1,0 +1,10 @@
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navbar-item {
+  color: #282c34;
+  text-decoration: none;
+  margin: 1rem;
+}

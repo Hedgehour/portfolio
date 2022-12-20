@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import icon1 from "../../Assets/icon1.svg";
 import icon2 from "../../Assets/icon2.svg";
-
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
   const [scrolled, seScrolled] = useState(false);
@@ -77,7 +76,11 @@ export const NavBar = () => {
           </Nav>
           <span className="navbar-text">
             <div className="social-icon">
-              <a href="#">
+              <a
+                href="https://www.linkedin.com/in/hyejee-ellis-b5326414b"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <img src={icon1} alt="" />
               </a>
               <a
@@ -88,9 +91,8 @@ export const NavBar = () => {
                 <img src={icon2} alt="" />
               </a>
             </div>
-            <button className="vvd" onClick={() => console.log("connect")}>
-              <span>Let's Connect</span>
-            </button>{" "}
+            <a href= "#connect"> <button className="vvd" onClick={() => console.log("connect")}>
+              <span>Let's Connect</span> </button></a>
           </span>
         </Navbar.Collapse>
       </Container>

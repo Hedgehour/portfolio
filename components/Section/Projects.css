@@ -1,0 +1,117 @@
+.project {
+    padding: 80px 0;
+    position: relative;
+    background-color: var(--rose);
+    border-radius: 64px;
+  }
+  .project h2 {
+    font-size: 45px;
+    font-weight: 700;
+    text-align: center;
+  }
+  .project p {
+    color: black;
+    font-size: 18px;
+    letter-spacing: 0.8px;
+    line-height: 1.5em;
+    margin: 14px auto 30px auto;
+    text-align: center;
+    width: 56%;
+  }
+  .project .nav.nav-pills {
+    width: 72%;
+    margin: 0 auto;
+    border-radius: 60px;
+    background-color: rgb(255 255 255 / 10%);
+    overflow: hidden;
+  }
+  .project .nav.nav-pills .nav-item {
+    width: 33.33333%;
+  }
+  .project .nav.nav-pills .nav-link {
+    background-color: transparent;
+    border-radius: 0;
+    padding: 9px 0;
+    color: black;
+    width: 100%;
+    font-size: 17px;
+    letter-spacing: 0.8px;
+    font-weight: 400;
+    position: relative;
+    transition: 0.3s ease-in-out;
+    text-align: center;
+    z-index: 0;
+  }
+  .project .nav.nav-pills .nav-link::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
+    opacity: 2;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: 0.3s ease-in-out;
+  }
+  .project .nav.nav-pills .nav-link.active::before {
+    width: 100% !important;
+  }
+  .project .nav.nav-pills .nav-link.active {
+    border: 1px solid rgba(255, 255, 255, 1);
+  }
+  .nav-link#projects-tabs-tab-first {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 55px 0px 0px 55px;
+  }
+  .nav-link#projects-tabs-tab-second {
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  }
+  .nav-link#projects-tabs-tab-third {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 0 55px 55px 0;
+  }
+  .proj-imgbx {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+  .proj-imgbx::before {
+    content: "";
+    background: linear-gradient(90.21deg, #cb6ea6 -6.91%, #7157e2 111.58%);
+    opacity: 0.50;
+    position: absolute;
+    width: 100%;
+    height: 0;
+    transition: 0.4s ease-in-out;
+  }
+  
+  .proj-txtx {
+    position: relative;
+    text-align: auto;
+    top: 8%;
+    left: 30%;
+    transition: 0.5s ease-in-out;
+    width: 50%;
+    color: #fff;
+  }
+  .proj-txtx.hover {
+    top: 60%;
+    opacity: 1;
+  }
+  .proj-txtx h4 {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    line-height: 2em;
+    width: fit-content;
+    position: center;
+  }
+  .proj-txtx span {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: 0.8px;
+  }

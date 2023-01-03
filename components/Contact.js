@@ -1,8 +1,9 @@
 import { useState } from "react";
-import {Container, Row, Col} from "react-bootstrap";
-import hedgeGif from "../Assets/hedgeLogo.gif";
-import 'animate.css';
-import TrackVisibility from 'react-on-screen';
+import Image from "next/image";
+import { Container, Row, Col } from "react-bootstrap";
+import hedgeGif from "./Assets/Maingif.gif";
+import "animate.css";
+import TrackVisibility from "react-on-screen";
 
 export const Contact = () => {
   const formInitialDetails = {
@@ -26,7 +27,7 @@ export const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     // setButtonText("Sending...");
-    console.log('Saving Contact Info', formDetails);
+    console.log("Saving Contact Info", formDetails);
     // let response = await fetch(`http://localhost:5000/contact`, {
     //   method: "POST",
     //   headers: {
@@ -54,7 +55,7 @@ export const Contact = () => {
           <Col size={12} md={6}>
             <TrackVisibility>
               {({ isVisible }) => (
-                <img
+                <Image
                   className={
                     isVisible ? "animate__animated animate__zoomIn" : ""
                   }

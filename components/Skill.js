@@ -1,9 +1,9 @@
 import { Container, Row, Col } from "react-bootstrap";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import meter1 from "../Assets/meter1.svg";
-import meter2 from "../Assets/meter1.svg";
-import meter3 from "../Assets/meter1.svg";
+// import meter1 from "../Assets/meter1.svg";
+// import meter2 from "../Assets/meter1.svg";
+// import meter3 from "../Assets/meter1.svg";
 
 export const Skills = () => {
   const responsive = {
@@ -55,15 +55,15 @@ export const Skills = () => {
                 className="skill-slider"
               >
                 <div className="item">
-                  <img src={meter1} alt="image" />
+                  {/* <img src={meter1} alt="image" /> */}
                   <h5> Web Development</h5>
                 </div>
                 <div className="item">
-                  <img src={meter2} alt="image" />
+                  {/* <img src={meter2} alt="image" /> */}
                   <h5> UI/UX Design</h5>
                 </div>
                 <div className="item">
-                  <img src={meter3} alt="image" />
+                  {/* <img src={meter3} alt="image" /> */}
                   <h5> Cybersecurity Practices</h5>
                 </div>
                 {/* <div className= "item">

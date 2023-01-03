@@ -25,7 +25,7 @@ body {
   color: white;
   font-family: "Courier New", Courier, monospace;
   background-image: url("../public/clouds.jpg");
-  background-size: cover;
+  background-size: inherit;
   background-position: top center;
   background-repeat: no-repeat;
 }
@@ -186,6 +186,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 40%;
   z-index: 1;
   transition: 0.3s ease-in-out;
+ 
 }
 .social-icon a:hover img {
   filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%)

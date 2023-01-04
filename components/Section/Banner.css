@@ -1,7 +1,7 @@
 .banner {
   margin-top: 0;
   padding: 50px 0 50px 0;
-  background-position: top center;
+  background-position:left;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -15,7 +15,7 @@
     rgba(216, 167, 162, 1) 55%,
     rgba(228, 203, 193, 1) 100%
   );
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 3px solid rgba(255, 255, 255, 0.5);
   font-size: 20px;
   margin-bottom: 16px;
   display: inline-block;
@@ -25,7 +25,7 @@
   font-weight: 700;
   letter-spacing: 0.8px;
   line-height: 1;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   display: block;
 }
 .banner p {
@@ -37,7 +37,7 @@
   width: 96%;
 }
 .banner button {
-  color: white;
+  color:#616f76;
   font-weight: 700;
   font-size: 20px;
   margin-top: 40px;

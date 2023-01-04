@@ -1,6 +1,4 @@
-:root {
-  --rose: #d1b9b7;
-}
+
 
 * {
   margin: 0;
@@ -9,25 +7,21 @@
 }
 html {
   scroll-behavior: smooth;
-  scroll-padding: 75px;
+  scroll-padding:80px;
+  
 }
 
 body {
   font-weight: 400;
   overflow-x: hidden;
   position: relative;
-  background:linear-gradient(
-      22deg,
-      rgba(199, 224, 219, 1) 21%,
-      rgba(178, 171, 177, 1) 52%,
-      rgba(226, 180, 163, 1) 84%
-    );
-  color: white;
+  background: rgba(237, 237, 237, 0.6153054971988796);
+  color: #4e5255;
   font-family: "Courier New", Courier, monospace;
-  background-image: url("../public/Dark\ Pastel\ Background.jpg");
-  background-size: cover;
-  background-position: top center;
-  background-repeat: no-repeat;
+  background-size:inherit;
+  background-position: top;
+  backdrop-filter: grayscale(85%);
+  /* background-repeat: no-repeat; */
 }
 
 h1,

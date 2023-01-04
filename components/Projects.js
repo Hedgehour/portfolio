@@ -7,27 +7,33 @@ import { ProjectCard } from "./ProjectCard";
 // import colorSharp2 from "../assets/img/color-sharp2.png";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
+import Image from "next/image";
+// import ImageOne from "../components/Assets/designtrns.png";
 
 export const Projects = () => {
   const projects = [
     {
       title: "Website Development",
       description: "Design & Development",
+      image: "/Devices-bro.svg" 
     },
+    
     {
       title: "Game Development",
       description: "Design & Development",
+      image:"/Demo-bro.svg"
     },
     {
         title: "Productivity Applications",
         description: "Design & Development",
+        image:"/Notes-bro.svg"
       },
   ];
   return (
     <section className="project" id="projects">
       <Container>
         <Row>
-          <Col size={12}>
+          <Col size={10}>
             <TrackVisibility>
               {({ isVisible }) =>
               <div
@@ -69,7 +75,7 @@ export const Projects = () => {
                         })}
                       </Row>
                     </Tab.Pane>
-                    <Tab.Pane eventKey="section">
+                    <Tab.Pane eventKey="second">
                       <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Cumque quam, quod neque provident velit, rem explicabo

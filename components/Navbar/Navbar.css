@@ -1,19 +1,19 @@
 nav.navbar {
   padding: 18px 0;
-  position: fixed;
+  position:sticky;
   width: 100%;
   top: 0;
   z-index: 9999;
-  transition: 0.32 ease-in-out;
+  transition: .32 ease-in-out;
 }
 nav.navbar.scrolled {
   padding: 0px 0;
-  background-color: #282c34;
+  background-color: #DFBFA9;
 }
 
 nav.navbar.navbar-nav .nav-link.navbar-link {
   font-weight: 700;
-  color: white;
+  color:#616F76;
   letter-spacing: 0.8px;
   padding: 0 25px;
   font-size: 18px;
@@ -32,8 +32,8 @@ span.navbar-text {
 }
 .navbar-text button {
   font-weight: 600;
-  color: #fff;
-  border: 1px solid #fff;
+  color:black;
+  border: 1px solid whitesmoke;
   padding: 9px 14px;
   font-size: 15px;
   margin-left: 18px;
@@ -49,14 +49,14 @@ span.navbar-text {
   width: 0%;
   height: 100%;
   position: absolute;
-  background-color: #fff;
+  background-color: whitesmoke;
   left: 0;
   top: 0;
   z-index: -1;
   transition: 0.3s ease-in-out;
 }
 .navbar-text button:hover {
-  color: #282c34;
+  color:black;
 }
 .navbar-text button:hover::before {
   content: "";
@@ -74,19 +74,19 @@ nav.navbar .navbar-toggler-icon {
   height: 17px;
   background-image: none;
   position: relative;
-  border-bottom: 2px solid #fff;
+  border-bottom: 2px solid whitesmoke;
   transition: all 300ms linear;
   top: -2px;
 }
 nav.navbar .navbar-toggler-icon:focus {
-  border-bottom: 2px solid #fff;
+  border-bottom: 2px solid whitesmoke;
 }
 nav.navbar .navbar-toggler-icon:after,
 nav.navbar .navbar-toggler-icon:before {
   width: 24px;
   position: absolute;
   height: 2px;
-  background-color: black;
+  background-color: whitesmoke;
   top: 0;
   left: 0;
   content: "";
@@ -98,7 +98,7 @@ nav.navbar .navbar-toggler-icon:after {
 }
 nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
   transform: rotate(45deg);
-  background-color: black;
+  background-color: whitesmoke;
   height: 2px;
 }
 nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
@@ -107,7 +107,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
   height: 2px;
 }
 nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
-  border-color: transparent;
+  border-color: whitesmoke;
 }
 /* Social Icon Section */
 .social-icon {
@@ -159,12 +159,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   hue-rotate(346deg) brightness(95%) contrast(86%);
   color: #282c34; }
 .App-body {
-    background-color: rgb(226, 180, 163);
+    background-color: transparent;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size: calc(10px + 2vmin);
-    color: white;
+    color: #616f76;
   }

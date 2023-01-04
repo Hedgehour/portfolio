@@ -31,7 +31,7 @@ export const NavBar = () => {
   return (
     <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
       <Container>
-        <Navbar.Brand href="#home" style={{ color: "white" }}>
+        <Navbar.Brand href="#home" style={{ color: "//#endregion616f76" }}>
           HedgeHour
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -43,7 +43,7 @@ export const NavBar = () => {
                 activeLink === "home" ? "active navbar-link" : "navbar-link"
               }
               onClick={() => onUpdateActiveLink("home")}
-              style={{ color: "white" }}
+              style={{ color: "//#endregion616f76" }}
             >
               Home
             </Nav.Link>
@@ -53,7 +53,7 @@ export const NavBar = () => {
                 activeLink === "skills" ? "active navbar-link" : "navbar-link"
               }
               onClick={() => onUpdateActiveLink("skills")}
-              style={{ color: "white" }}
+              style={{ color: "//#endregion616f76" }}
             >
               Skills
             </Nav.Link>
@@ -63,7 +63,7 @@ export const NavBar = () => {
                 activeLink === "projects" ? "active navbar-link" : "navbar-link"
               }
               onClick={() => onUpdateActiveLink("projects")}
-              style={{ color: "white" }}
+              style={{ color: "//#endregion616f76" }}
             >
               Projects
             </Nav.Link>
@@ -73,7 +73,7 @@ export const NavBar = () => {
                 activeLink === "resume" ? "active navbar-link" : "navbar-link"
               }
               onClick={() => onUpdateActiveLink("resume")}
-              style={{ color: "white" }}
+              style={{ color: "//#endregion616f76" }}
             >
               Resume
             </Nav.Link>

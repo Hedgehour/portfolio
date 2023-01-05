@@ -58,7 +58,7 @@
   top: 0;
   left: 0;
   z-index: -1;
-  transition: 0.3s ease-in-out;
+  transition: .3s ease-in-out;
 }
 .project .nav.nav-pills .nav-link.active::before {
   width: 100% !important;
@@ -88,7 +88,7 @@
 
 .proj-txtx {
   text-align: center;
-  transition: 0.3s ease-in-out;
+  transition: 1.5s ease-in-out;
   color: #4e5255;
 }
 

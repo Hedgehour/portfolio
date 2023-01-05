@@ -58,7 +58,8 @@
 }
 .banner img {
   animation: updown 15s linear infinite;
-  height: 85vmin;
+  height: 500px;
+  width: 500px;
   position: relative;
   width: auto;
 }

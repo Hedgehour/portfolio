@@ -63,14 +63,21 @@ export const Banner = () => {
                     {"Hello I'm Hyejee, "} <span className="wrap"> {text}</span>
                   </h1>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla
+                    I’m Hyejee (aka HedgeHour), the hedgehog of web development.
+                    I may be new to the game, but I bring a fresh
+                    perspective to every project and I’m eager to learn new
+                    things and find innovative solutions. As a novice web
+                    developer, I’m still learning the ropes, but I’ve already
+                    been able to create functional and visually pleasing
+                    websites and various applications. I’m a team player and I’m always looking for ways
+                    to learn from my collogues and improve my skills.
                   </p>
-                  <a href='#connect'>
+                  <p> When I’m not coding, I enjoy spending time with my three (3) Siberian
+                    huskies and coming up with delicious new recipes! If you are
+                    looking for a web developer who is eager to learn and bring a
+                    touch of creativity and charm to everything I do, look no
+                    further!</p>
+                  <a href="#connect">
                     <button>
                       Let's connect <ArrowRightCircle size={25} />
                     </button>

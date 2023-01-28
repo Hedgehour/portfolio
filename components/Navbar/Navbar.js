@@ -58,16 +58,7 @@ export const NavBar = () => {
             >
               Projects
             </Nav.Link>
-            <Nav.Link
-              href="#resume"
-              className={
-                activeLink === "resume" ? "active navbar-link" : "navbar-link"
-              }
-              onClick={() => onUpdateActiveLink("resume")}
-              style={{ color: "//#endregion616f76" }}
-            >
-              Resume
-            </Nav.Link>
+            
           </Nav>
           <span className="navbar-text">
             <div className="social-icon">

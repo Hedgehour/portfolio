@@ -35,6 +35,8 @@
   letter-spacing: 0.8px;
   line-height: 1.5em;
   width: 96%;
+  padding: 1rem 1rem 0rem 1rem;
+  margin: 0;
 }
 .banner button {
   color:#616f76;
@@ -58,10 +60,9 @@
 }
 .banner img {
   animation: updown 15s linear infinite;
-  height: 500px;
-  width: 500px;
+  height: auto;
   position: relative;
-  width: auto;
+  width: 100%;
 }
 @keyframes updown {
   0% {

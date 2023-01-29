@@ -30,7 +30,7 @@ export const Projects = () => {
     },
   ];
   return (
-    <section className="project" id="projects">
+    <section className="project py-5 px-3" id="projects">
       <Container>
         <Row>
           <Col size={10}>
@@ -55,7 +55,7 @@ export const Projects = () => {
                     versatility and experience as a web developer. Here are a
                     few examples of my work that highlights my skills in game
                     development, productivity application, and website
-                    development{" "}
+                    development
                   </p>
                   <Tab.Container id="projects-tabs" defaultActiveKey="first">
                     <Nav

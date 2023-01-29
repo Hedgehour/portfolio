@@ -1,5 +1,4 @@
 .project {
-  padding: 150px;
   position: relative;
   background: #ffffff;
   /* backdrop-filter: blur(4px);
@@ -12,15 +11,11 @@
 }
 .project p {
   color: black;
-  font-size: 14px;
-  letter-spacing: 1.0px;
-  line-height: 1.2em;
   margin: 30px auto 30px auto;
   text-align: center;
   width:auto;
 }
 .project .nav.nav-pills {
-  width: 72%;
   margin: 0 auto;
   border-radius: 60px;
   background-color: rgba(255, 255, 255, 0.5);

@@ -21,7 +21,10 @@ export const NavBar = () => {
 
   return (
     <Navbar expand="lg" className={scrollY >= 50 ? "scrolled" : ""}>
-      <Container>
+      <div
+        className="d-flex justify-content-between align-items-center px-4 py-2"
+        style={{ width: "100%" }}
+      >
         <Navbar.Brand href="#home" style={{ color: "//#endregion616f76" }}>
           HedgeHour
         </Navbar.Brand>
@@ -58,7 +61,6 @@ export const NavBar = () => {
             >
               Projects
             </Nav.Link>
-            
           </Nav>
           <span className="navbar-text">
             <div className="social-icon">
@@ -78,14 +80,13 @@ export const NavBar = () => {
               </a>
             </div>
             <a href="#connect">
-              {" "}
               <button className="vvd" onClick={() => console.log("connect")}>
                 <span>Let's Connect</span>{" "}
               </button>
             </a>
           </span>
         </Navbar.Collapse>
-      </Container>
+      </div>
     </Navbar>
   );
 };

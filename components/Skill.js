@@ -29,22 +29,19 @@ export const Skills = () => {
   return (
     <section className="skills" id="skills">
       <div className="container">
-        {" "}
         <div className="row">
           <div className="col-12">
             <div className="Skill-bx wow zoomIn"></div>
           </div>
         </div>
-      </div>
-      <div>
         <Row>
-          <Col>
-            <div className="skill-bx">
+          <Col className="px-0">
+            <div className="skill-bx px-3">
               <h2>Skills</h2>
-              <p>
-                As a developer, I have a wide range of skills that enable me
-                to create functional and visually pleasing web applications.
-                From front-end development to back-end programming, I have the
+              <p className="py-3">
+                As a developer, I have a wide range of skills that enable me to
+                create functional and visually pleasing web applications. From
+                front-end development to back-end programming, I have the
                 ability to create dynamic and efficient online experiences. Here
                 is a list of some of my key skills that I bring to the table:
               </p>

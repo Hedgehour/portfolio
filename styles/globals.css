@@ -1,0 +1,34 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding:80px;
+  
+}
+
+body {
+  font-weight: 400;
+  overflow-x: hidden;
+  position: relative;
+  background: rgba(237, 237, 237, 0.6153054971988796);
+  color: #4e5255;
+  font-family: "Courier New", Courier, monospace;
+  background-size:inherit;
+  background-position: top;
+  backdrop-filter: grayscale(85%);
+  /* background-repeat: no-repeat; */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: normal;
+}

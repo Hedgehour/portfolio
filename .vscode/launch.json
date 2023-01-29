@@ -1,10 +1,10 @@
 {
   "configurations": [
     {
-      "name": "Start Web",
+      "name": "Start App",
       "request": "launch",
-      "runtimeArgs": ["start:web", "--inspect"],
-      "runtimeExecutable": "yarn",
+      "runtimeArgs": ["run-script", "dev"],
+      "runtimeExecutable": "npm",
       "skipFiles": ["<node_internals>/**"],
       "type": "node",
       "console": "integratedTerminal"

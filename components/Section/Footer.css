@@ -1,0 +1,23 @@
+.footer {
+    padding: 0 0 20px 0;
+    /* background-image: url('./assets/img/footer-bg.png'); */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    
+  }
+  
+  
+  .footer p {
+    font-weight: 400;
+    font-size: 14px;
+    color: black;
+    letter-spacing: 0.5px;
+    margin-top: 10px;
+    text-align: center;
+  }
+  .footer a {font-weight:100;
+font-style: italic;
+color:lightgrey;
+text-decoration: none;}

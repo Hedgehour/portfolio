@@ -63,23 +63,26 @@ export const Banner = () => {
                     {"Hello I'm Hyejee, "} <span className="wrap"> {text}</span>
                   </h1>
                   <p>
-                    I’m Hyejee (aka HedgeHour), the hedgehog of web development.
-                    I may be new to the game, but I bring a fresh
-                    perspective to every project and I’m eager to learn new
+                    I am Hyejee (aka HedgeHour), the hedgehog of web
+                    development. I may be new to the game, but I bring a fresh
+                    perspective to every project and I am eager to learn new
                     things and find innovative solutions. As a novice web
-                    developer, I’m still learning the ropes, but I’ve already
+                    developer, I am still learning the ropes, but I have already
                     been able to create functional and visually pleasing
-                    websites and various applications. I’m a team player and I’m always looking for ways
-                    to learn from my collogues and improve my skills.
+                    websites and various applications. I am a team player and I
+                    am always looking for ways to learn from my collogues and
+                    improve my skills.
                   </p>
-                  <p> When I’m not coding, I enjoy spending time with my three (3) Siberian
-                    huskies and coming up with delicious new recipes! If you are
-                    looking for a web developer who is eager to learn and bring a
-                    touch of creativity and charm to everything I do, look no
-                    further!</p>
+                  <p>
+                    When I am not coding, I enjoy spending time with my three
+                    (3) Siberian huskies and coming up with delicious new
+                    recipes! If you are looking for a web developer who is eager
+                    to learn and bring a touch of creativity and charm to
+                    everything I do, look no further!
+                  </p>
                   <a href="#connect">
                     <button>
-                      Let's connect <ArrowRightCircle size={25} />
+                      Let&apos;s connect <ArrowRightCircle size={25} />
                     </button>
                   </a>
                 </div>

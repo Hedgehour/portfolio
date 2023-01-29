@@ -13,11 +13,11 @@
   color: black;
   margin: 30px auto 30px auto;
   text-align: center;
-  width:auto;
+  width: auto;
 }
 .project .nav.nav-pills {
   margin: 0 auto;
-  border-radius: 60px;
+
   background-color: rgba(255, 255, 255, 0.5);
   overflow: hidden;
 }
@@ -40,6 +40,7 @@
 }
 .project .nav.nav-pills .nav-link::before {
   content: "";
+
   position: absolute;
   width: 0;
   height: 100%;
@@ -53,7 +54,7 @@
   top: 0;
   left: 0;
   z-index: -1;
-  transition: .3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 .project .nav.nav-pills .nav-link.active::before {
   width: 100% !important;
@@ -63,7 +64,6 @@
 }
 .nav-link#projects-tabs-tab-first {
   border: 1px solid #cea99e;
-  border-radius: 55px 0px 0px 55px;
 }
 .nav-link#projects-tabs-tab-second {
   border-top: 1px solid #cea99e;
@@ -71,7 +71,6 @@
 }
 .nav-link#projects-tabs-tab-third {
   border: 1px solid #cea99e;
-  border-radius: 0 55px 55px 0;
 }
 .proj-imgbx {
   border-radius: 10px;
@@ -79,14 +78,14 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  width:auto
+  width: auto;
 }
 
 .proj-txtx {
   text-align: center;
   transition: 1.5s ease-in-out;
   color: #4e5255;
-  width:auto
+  width: auto;
 }
 
 .proj-txtx h4 {
@@ -96,7 +95,7 @@
   line-height: 1em;
   position: relative;
   display: block;
-  width:auto;
+  width: auto;
 }
 .proj-txtx span {
   font-style: italic;
@@ -105,7 +104,7 @@
   letter-spacing: 0.6px;
   position: center;
   display: block;
-  width:auto;
+  width: auto;
 }
 .tab-content {
   margin: 50px;

@@ -3,7 +3,7 @@
   position: relative;
 }
 .skill-bx {
-  background:#F4EEEC;
+  background: #f4eeec;
   margin-top: 60px;
   text-align: center;
   position: relative;
@@ -30,6 +30,9 @@
 .skill-slider .item img {
   width: 50%;
   margin: 0 auto 15px auto;
+}
+.dev-icon {
+  font-size: 5rem !important;
 }
 .background-image-left {
   top: 28%;

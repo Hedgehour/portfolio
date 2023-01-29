@@ -51,21 +51,24 @@ export const Skills = () => {
                 className="skill-slider"
               >
                 <div className="item">
-                  {/* <img src={meter1} alt="image" /> */}
-                  <h5> Web Development</h5>
+                  <i className="devicon-react-original-wordmark dev-icon"></i>
                 </div>
                 <div className="item">
-                  {/* <img src={meter2} alt="image" /> */}
-                  <h5> UI/UX Design</h5>
+                  <i className="devicon-nextjs-original-wordmark colored dev-icon"></i>
                 </div>
+
                 <div className="item">
-                  {/* <img src={meter3} alt="image" /> */}
-                  <h5> Cybersecurity Practices</h5>
+                  <i className="devicon-javascript-plain dev-icon"></i>
                 </div>
-                {/* <div className= "item">
-                <img src={} alt="image"/> 
-                <h5> ""</h5>
-                </div> */}
+                <div className="items">
+                <i class="devicon-html5-plain-wordmark dev-icon "></i>
+                </div>
+                <div className="items">
+                  <i class="devicon-css3-plain-wordmark dev-icon"></i>
+                </div>
+                <div className="items">
+                  <i class="devicon-bootstrap-plain-wordmark dev-icon"></i>
+                </div>
               </Carousel>
             </div>
           </Col>

@@ -8,6 +8,8 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 
 export const Contact = () => {
+  const [loading, setLoading] = useState(false);
+
   const formik = useFormik({
     initialValues: {
       firstName: "",
@@ -25,20 +27,22 @@ export const Contact = () => {
       email: Yup.string().email("Invalid email address").required("Required"),
     }),
     onSubmit: async (values) => {
+      setLoading(true);
+
       try {
-        // alert(JSON.stringify(values, null, 2));
         const response = await fetch("/api/contact", {
           method: "POST",
           body: JSON.stringify(values),
         });
 
         const data = await response.json();
-
         if (response.status !== 200) throw data;
 
         formik.resetForm();
       } catch (error) {
         console.error("An error occurred: ", error);
+      } finally {
+        setLoading(false);
       }
     },
   });
@@ -128,7 +132,7 @@ export const Contact = () => {
                           onChange={formik.handleChange}
                           onBlur={formik.handleBlur}
                         ></textarea>
-                        <button type="submit">
+                        <button type="submit" disabled={loading}>
                           <span>{buttonText}</span>
                         </button>
                       </Col>

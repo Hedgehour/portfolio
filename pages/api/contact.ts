@@ -19,6 +19,15 @@ export default async function handler(
     // Build the API endpoint URL
     const apiUrl = `https://emailverification.whoisxmlapi.com/api/v2?apiKey=${apiKey}&emailAddress=${email}`;
     const verificationResponse = await fetch(apiUrl);
+
+    if (verificationResponse.status !== 200) {
+      console.error(
+        `Verification check failed - Status Code ${verificationResponse.status}`,
+        verificationResponse.body
+      );
+      throw "Verification Failed - verification response status not successful";
+    }
+
     const data = await verificationResponse.json();
 
     if (data.smtpCheck === "false") {
@@ -40,7 +49,11 @@ export default async function handler(
 
     // if status code is not 200 - Success, throw an error
     if (submissionResponse.status !== 200) {
-      throw "Submission Failed";
+      console.error(
+        `Web3forms submission failed - Status Code ${submissionResponse.status}`,
+        submissionResponse.body
+      );
+      throw "Submission Failed - Web3Forms submission status not successful";
     }
 
     // return success status without content when code makes it this far successfully

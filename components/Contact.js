@@ -25,13 +25,21 @@ export const Contact = () => {
       email: Yup.string().email("Invalid email address").required("Required"),
     }),
     onSubmit: async (values) => {
-      // alert(JSON.stringify(values, null, 2));
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        body: JSON.stringify(values),
-      });
-      const data = await response.json();
-      
+      try {
+        // alert(JSON.stringify(values, null, 2));
+        const response = await fetch("/api/contact", {
+          method: "POST",
+          body: JSON.stringify(values),
+        });
+
+        const data = await response.json();
+
+        if (response.status !== 200) throw data;
+
+        formik.resetForm();
+      } catch (error) {
+        console.error("An error occurred: ", error);
+      }
     },
   });
 

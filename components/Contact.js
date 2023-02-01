@@ -9,8 +9,8 @@ import * as Yup from "yup";
 import { AppContext } from "../pages";
 
 export const Contact = () => {
-  const [loading, setLoading] = useState(false);
-  const { grecaptchaKeyId, token, setToken } = useContext(AppContext);
+  const { grecaptchaKeyId, token, setToken, loading, setLoading } =
+    useContext(AppContext);
 
   const formik = useFormik({
     initialValues: {
@@ -65,7 +65,6 @@ export const Contact = () => {
   });
 
   const [buttonText] = useState("Send");
-  const [status] = useState({});
 
   return (
     <section className="contact" id="connect">

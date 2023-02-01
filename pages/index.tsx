@@ -13,28 +13,41 @@ import { Contact } from "../components/Contact";
 import { Footer } from "../components/Section/Footer";
 import Script from "next/script";
 import { createContext } from "react";
+import Spinnerbackground from "../components/Spinnerbackdrop";
 
 export interface AppState {
   grecaptcha: any;
   grecaptchaKeyId?: string;
   token?: string;
   setToken: (token: string) => any;
+  loading: boolean;
+  setLoading: (loading: boolean) => void;
 }
 
 export const AppContext = createContext<AppState>({
   grecaptcha: {},
   setToken: () => ({}),
+  loading: false,
+  setLoading: () => ({}),
 });
 
 export default function Home() {
   const [grecaptcha, setGrecaptcha] = useState<any | undefined>();
   const [token, setToken] = useState<string | undefined>();
-  // const handleSetToken = (token: string) => setToken(token);
+  const [loading, setLoading] = useState<boolean>(false);
+
   const grecaptchaKeyId = process.env.NEXT_PUBLIC_GRECAPTCHA_KEY_ID;
 
   return (
     <AppContext.Provider
-      value={{ grecaptcha, grecaptchaKeyId, token, setToken }}
+      value={{
+        grecaptcha,
+        grecaptchaKeyId,
+        token,
+        setToken,
+        loading,
+        setLoading,
+      }}
     >
       <div className="App">
         <NavBar />
@@ -73,6 +86,7 @@ export default function Home() {
           ></Script>
         </Suspense>
       </div>
+      <Spinnerbackground />
     </AppContext.Provider>
   );
 }

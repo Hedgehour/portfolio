@@ -1,14 +1,17 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from "next";
 
+interface ContactApiResponse {}
+
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<any>
+  res: NextApiResponse<ContactApiResponse>
 ) {
   if (req.method !== "POST") {
-    return res
-      .status(405)
-      .json({ message: "Invalid HTTP method, only POST is allowed" });
+    return res.status(405).json({
+      success: false,
+      message: "Invalid HTTP method, only POST is allowed",
+    });
   }
   try {
     const apiKey = process.env.WHOISXML_API_KEY;
@@ -16,7 +19,39 @@ export default async function handler(
     // Extract the email address from the request body
     const { email } = JSON.parse(req.body);
 
-    // Build the API endpoint URL
+    // Captcha validation - check for bots
+    const grecaptchaToken = req.headers.authorization;
+
+    const grecaptchaBaseUrl = "https://www.google.com/recaptcha/api/siteverify";
+    const grecaptchaUrl = `${grecaptchaBaseUrl}?secret=${process.env.GRECAPTCHA_SECRET}&response=${grecaptchaToken}`;
+
+    const grecaptchaVerifyResponse = await fetch(grecaptchaUrl);
+    const grecaptchaVerifyResult = await grecaptchaVerifyResponse.json();
+
+    if (!grecaptchaVerifyResult.success) {
+      const [error] = grecaptchaVerifyResult["error-codes"];
+      console.warn(error);
+
+      let message: string;
+
+      switch (error) {
+        case "timeout-or-duplicate":
+          message =
+            "Possible timeout or duplicate. Please refresh and try again.";
+          break;
+        default:
+          message = "Captcha Failed";
+      }
+
+      return res.status(401).json({ message, type: "toast-error" });
+    }
+
+    if (grecaptchaVerifyResult.score < 0.7)
+      return res
+        .status(401)
+        .json({ type: "toast-error", message: "Captcha Failed" });
+
+    // Email Validation
     const apiUrl = `https://emailverification.whoisxmlapi.com/api/v2?apiKey=${apiKey}&emailAddress=${email}`;
     const verificationResponse = await fetch(apiUrl);
 
@@ -25,7 +60,8 @@ export default async function handler(
         `Verification check failed - Status Code ${verificationResponse.status}`,
         verificationResponse.body
       );
-      throw "Verification Failed - verification response status not successful";
+      return res.status(400).json({ email: "Email address invalid" });
+      //throw "Verification Failed - verification response status not successful";
     }
 
     const data = await verificationResponse.json();

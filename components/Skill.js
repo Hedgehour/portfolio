@@ -61,13 +61,13 @@ export const Skills = () => {
                   <i className="devicon-javascript-plain dev-icon"></i>
                 </div>
                 <div className="items">
-                <i class="devicon-html5-plain-wordmark dev-icon "></i>
+                <i className="devicon-html5-plain-wordmark dev-icon "></i>
                 </div>
                 <div className="items">
-                  <i class="devicon-css3-plain-wordmark dev-icon"></i>
+                  <i className="devicon-css3-plain-wordmark dev-icon"></i>
                 </div>
                 <div className="items">
-                  <i class="devicon-bootstrap-plain-wordmark dev-icon"></i>
+                  <i className="devicon-bootstrap-plain-wordmark dev-icon"></i>
                 </div>
               </Carousel>
             </div>

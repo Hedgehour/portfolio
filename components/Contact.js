@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Image from "next/image";
 import { Container, Row, Col } from "react-bootstrap";
 import hedgeGif from "./Assets/Maingif.gif";
@@ -6,9 +6,11 @@ import "animate.css";
 import TrackVisibility from "react-on-screen";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import { AppContext } from "../pages";
 
 export const Contact = () => {
   const [loading, setLoading] = useState(false);
+  const { grecaptchaKeyId, token, setToken } = useContext(AppContext);
 
   const formik = useFormik({
     initialValues: {
@@ -32,6 +34,9 @@ export const Contact = () => {
       try {
         const response = await fetch("/api/contact", {
           method: "POST",
+          headers: {
+            Authorization: token,
+          },
           body: JSON.stringify(values),
         });
 
@@ -41,7 +46,19 @@ export const Contact = () => {
         formik.resetForm();
       } catch (error) {
         console.error("An error occurred: ", error);
+        formik.setErrors(error);
       } finally {
+        try {
+          const newToken = await grecaptcha.enterprise.execute(
+            grecaptchaKeyId,
+            { action: "login" }
+          );
+          setToken(newToken);
+        } catch (error) {
+          console.log(error);
+          // createToast({ id: toasts.length, variant: "error", message: "Captcha failed to load. Please refresh and try again." });
+        }
+
         setLoading(false);
       }
     },
@@ -76,6 +93,7 @@ export const Contact = () => {
                   }
                 >
                   <h2>Get In Touch</h2>
+
                   <form onSubmit={formik.handleSubmit}>
                     <Row>
                       <Col size={12} sm={6} className="px-1">
@@ -136,7 +154,6 @@ export const Contact = () => {
                           <span>{buttonText}</span>
                         </button>
                       </Col>
-                     
                     </Row>
                   </form>
                 </div>

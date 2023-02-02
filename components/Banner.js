@@ -62,6 +62,12 @@ export const Banner = () => {
                   <h1>
                     {"Hello I'm Hyejee, "} <span className="wrap"> {text}</span>
                   </h1>
+                  <h5>
+                    From analyzing business trends to creating website gems,
+                    I have rolled up tight and transformed into the
+                    hedgehog of web development, bringing my business acumen
+                    to the digital world!
+                  </h5>
                   <p>
                     I am Hyejee (aka HedgeHour), the hedgehog of web
                     development. I may be new to the game, but I bring a fresh

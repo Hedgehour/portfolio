@@ -1,9 +1,6 @@
 import { Container, Row, Col } from "react-bootstrap";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-// import meter1 from "../Assets/meter1.svg";
-// import meter2 from "../Assets/meter1.svg";
-// import meter3 from "../Assets/meter1.svg";
 
 export const Skills = () => {
   const responsive = {
@@ -61,14 +58,24 @@ export const Skills = () => {
                   <i className="devicon-javascript-plain dev-icon"></i>
                 </div>
                 <div className="items">
-                <i class="devicon-html5-plain-wordmark dev-icon "></i>
+                  <i className="devicon-html5-plain-wordmark dev-icon "></i>
                 </div>
                 <div className="items">
-                  <i class="devicon-css3-plain-wordmark dev-icon"></i>
+                  <i className="devicon-css3-plain-wordmark dev-icon"></i>
                 </div>
                 <div className="items">
-                  <i class="devicon-bootstrap-plain-wordmark dev-icon"></i>
+                  <i className="devicon-bootstrap-plain-wordmark dev-icon"></i>
                 </div>
+                <div className="items">
+                  <i class="devicon-unity-original-wordmark colored dev-icon"></i>
+                </div>
+                <div className="items">
+                  <i class="devicon-csharp-line dev-icon"></i>
+                </div>
+                <div className="items">
+                  <i class="devicon-materialui-plain dev-icon"></i>
+                </div>
+                <div className="items"><i class="devicon-typescript-plain dev-icon"></i></div>
               </Carousel>
             </div>
           </Col>

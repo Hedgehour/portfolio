@@ -1,7 +1,7 @@
 .banner {
   margin-top: 0;
   padding: 50px 0 50px 0;
-  background-position:left;
+  background-position: left;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -28,6 +28,11 @@
   margin-bottom: 15px;
   display: block;
 }
+.banner h5 {
+  font-style: italic;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+}
 .banner p {
   color: black;
   font-size: 16px;
@@ -39,7 +44,7 @@
   margin: 0;
 }
 .banner button {
-  color:#616f76;
+  color: #616f76;
   font-weight: 700;
   font-size: 20px;
   margin-top: 40px;

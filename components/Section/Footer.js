@@ -8,7 +8,7 @@ export const Footer = () => {
           <p>Copyright 2023 HedgeHour. All Rights Reserved</p>
 
           <a
-            ClassName="Other-art"
+            className="Other-art"
             href="https://storyset.com/work"
             target="_blank"
             rel="noopener noreferrer"

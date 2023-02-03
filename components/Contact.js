@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Image from "next/image";
 import { Container, Row, Col } from "react-bootstrap";
 import hedgeGif from "./Assets/Maingif.gif";
@@ -6,9 +6,11 @@ import "animate.css";
 import TrackVisibility from "react-on-screen";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import { AppContext } from "../pages";
 
 export const Contact = () => {
-  const [loading, setLoading] = useState(false);
+  const { grecaptchaKeyId, token, setToken, loading, setLoading, setAlert } =
+    useContext(AppContext);
 
   const formik = useFormik({
     initialValues: {
@@ -32,23 +34,51 @@ export const Contact = () => {
       try {
         const response = await fetch("/api/contact", {
           method: "POST",
+          headers: {
+            Authorization: token,
+          },
           body: JSON.stringify(values),
         });
 
         const data = await response.json();
         if (response.status !== 200) throw data;
 
+        setAlert({
+          message: "Message successfully sent!",
+        });
         formik.resetForm();
       } catch (error) {
         console.error("An error occurred: ", error);
+
+        if (error?.email) {
+          formik.setErrors(error);
+        } else {
+          setAlert({
+            message:
+              error?.message ||
+              "An unexpected error occurred. Please try again later.",
+          });
+        }
       } finally {
+        try {
+          const newToken = await grecaptcha.enterprise.execute(
+            grecaptchaKeyId,
+            { action: "login" }
+          );
+          setToken(newToken);
+        } catch (error) {
+          console.log(error);
+          setAlert({
+            message: "Captcha failed to load. Please refresh and try again.",
+          });
+        }
+
         setLoading(false);
       }
     },
   });
 
   const [buttonText] = useState("Send");
-  const [status] = useState({});
 
   return (
     <section className="contact" id="connect">
@@ -76,6 +106,7 @@ export const Contact = () => {
                   }
                 >
                   <h2>Get In Touch</h2>
+
                   <form onSubmit={formik.handleSubmit}>
                     <Row>
                       <Col size={12} sm={6} className="px-1">
@@ -136,7 +167,6 @@ export const Contact = () => {
                           <span>{buttonText}</span>
                         </button>
                       </Col>
-                     
                     </Row>
                   </form>
                 </div>

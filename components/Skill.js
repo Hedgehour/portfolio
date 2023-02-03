@@ -70,8 +70,12 @@ export const Skills = () => {
                   <i class="devicon-unity-original-wordmark colored dev-icon"></i>
                 </div>
                 <div className="items">
-                  <i class="devicon-csharp-plain dev-icon"></i>
+                  <i class="devicon-csharp-line dev-icon"></i>
                 </div>
+                <div className="items">
+                  <i class="devicon-materialui-plain dev-icon"></i>
+                </div>
+                <div className="items"><i class="devicon-typescript-plain dev-icon"></i></div>
               </Carousel>
             </div>
           </Col>

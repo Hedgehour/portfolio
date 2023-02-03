@@ -9,7 +9,7 @@ import * as Yup from "yup";
 import { AppContext } from "../pages";
 
 export const Contact = () => {
-  const { grecaptchaKeyId, token, setToken, loading, setLoading } =
+  const { grecaptchaKeyId, token, setToken, loading, setLoading, setAlert } =
     useContext(AppContext);
 
   const formik = useFormik({
@@ -43,10 +43,15 @@ export const Contact = () => {
         const data = await response.json();
         if (response.status !== 200) throw data;
 
+        setAlert({
+          message: "Message successfully sent!",
+        });
         formik.resetForm();
       } catch (error) {
         console.error("An error occurred: ", error);
-        formik.setErrors(error);
+        setAlert({
+          message: error.message,
+        });
       } finally {
         try {
           const newToken = await grecaptcha.enterprise.execute(
@@ -56,7 +61,9 @@ export const Contact = () => {
           setToken(newToken);
         } catch (error) {
           console.log(error);
-          // createToast({ id: toasts.length, variant: "error", message: "Captcha failed to load. Please refresh and try again." });
+          setAlert({
+            message: "Captcha failed to load. Please refresh and try again.",
+          });
         }
 
         setLoading(false);

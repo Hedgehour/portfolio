@@ -1,6 +1,5 @@
 import { useContext } from "react";
 import Backdrop from "@mui/material/Backdrop";
-import CircularProgress from "@mui/material/CircularProgress";
 import { AppContext } from "../pages";
 import styles from "./Spinnerbackdrop.module.css";
 

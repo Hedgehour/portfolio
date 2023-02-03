@@ -1,10 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import React, { Suspense, useState } from "react";
-// import Head from "next/head";
-// import Image from "next/image";
-// import { Inter } from "@next/font/google";
 import { NavBar } from "../components/Navbar/Navbar";
-// import logo from "";
 
 import { Banner } from "../components/Banner";
 import { Skills } from "../components/Skill";
@@ -14,6 +10,11 @@ import { Footer } from "../components/Section/Footer";
 import Script from "next/script";
 import { createContext } from "react";
 import Spinnerbackground from "../components/Spinnerbackdrop";
+import Snackbar from "../components/Snackbar";
+
+export interface Alert {
+  message: string;
+}
 
 export interface AppState {
   grecaptcha: any;
@@ -22,6 +23,8 @@ export interface AppState {
   setToken: (token: string) => any;
   loading: boolean;
   setLoading: (loading: boolean) => void;
+  alert: Alert | undefined;
+  setAlert: (alert: Alert) => void;
 }
 
 export const AppContext = createContext<AppState>({
@@ -29,12 +32,15 @@ export const AppContext = createContext<AppState>({
   setToken: () => ({}),
   loading: false,
   setLoading: () => ({}),
+  alert: undefined,
+  setAlert: () => ({}),
 });
 
 export default function Home() {
   const [grecaptcha, setGrecaptcha] = useState<any | undefined>();
   const [token, setToken] = useState<string | undefined>();
   const [loading, setLoading] = useState<boolean>(false);
+  const [alert, setAlert] = useState<Alert | undefined>();
 
   const grecaptchaKeyId = process.env.NEXT_PUBLIC_GRECAPTCHA_KEY_ID;
 
@@ -47,6 +53,8 @@ export default function Home() {
         setToken,
         loading,
         setLoading,
+        alert,
+        setAlert,
       }}
     >
       <div className="App">
@@ -62,7 +70,8 @@ export default function Home() {
             strategy="lazyOnload"
             onLoad={() => {
               window.grecaptcha.enterprise.ready(async function () {
-                // startLoading();
+                setLoading(true);
+
                 try {
                   const initialToken =
                     await window.grecaptcha.enterprise.execute(
@@ -72,14 +81,12 @@ export default function Home() {
                   setToken(initialToken);
                   setGrecaptcha(window.grecaptcha);
                 } catch (error) {
-                  // createToast({
-                  //   id: toasts.length,
-                  //   message:
-                  //     "Captcha failed to load. Please refresh and try again.",
-                  //   variant: "error",
-                  // });
+                  setAlert({
+                    message:
+                      "Captcha failed to load. Please refresh and try again.",
+                  });
                 } finally {
-                  // stopLoading();
+                  setLoading(false);
                 }
               });
             }}
@@ -87,6 +94,7 @@ export default function Home() {
         </Suspense>
       </div>
       <Spinnerbackground />
+      <Snackbar />
     </AppContext.Provider>
   );
 }

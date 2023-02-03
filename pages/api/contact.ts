@@ -43,14 +43,13 @@ export default async function handler(
           message = "Captcha Failed";
       }
 
-      return res.status(401).json({ message, type: "toast-error" });
+      return res.status(401).json({ message });
     }
 
-    if (grecaptchaVerifyResult.score < 0.7)
-      return res
-        .status(401)
-        .json({ type: "toast-error", message: "Captcha Failed" });
-
+    if (grecaptchaVerifyResult.score < 0.7) {
+      return res.status(401).json({ message: "Captcha Failed" });
+    }
+    
     // Email Validation
     const apiUrl = `https://emailverification.whoisxmlapi.com/api/v2?apiKey=${apiKey}&emailAddress=${email}`;
     const verificationResponse = await fetch(apiUrl);
@@ -68,7 +67,7 @@ export default async function handler(
 
     if (data.smtpCheck === "false") {
       // short circuit the response because email is not deliverable - status 400 (bad request)
-      return res.status(400).json({ message: "Email is not deliverable" });
+      return res.status(400).json({ email: "Email is not deliverable" });
     }
 
     const submissionResponse = await fetch("https://api.web3forms.com/submit", {
@@ -93,7 +92,7 @@ export default async function handler(
     }
 
     // return success status without content when code makes it this far successfully
-    return res.status(200).json({ message: "Successfully delivered" });
+    return res.status(200).json({ message: "Message successfully delivered" });
   } catch (error) {
     // log detailed error for app logging
     console.error("An unexpected error occurred", error);

@@ -49,9 +49,16 @@ export const Contact = () => {
         formik.resetForm();
       } catch (error) {
         console.error("An error occurred: ", error);
-        setAlert({
-          message: error.message,
-        });
+
+        if (error?.email) {
+          formik.setErrors(error);
+        } else {
+          setAlert({
+            message:
+              error?.message ||
+              "An unexpected error occurred. Please try again later.",
+          });
+        }
       } finally {
         try {
           const newToken = await grecaptcha.enterprise.execute(

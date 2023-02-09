@@ -64,7 +64,7 @@ export const NavBar = () => {
           <span className="navbar-text">
             <div className="social-icon">
               <a
-                href="www.linkedin.com/in/hyejee-ellis-ms-b5326414b"
+                href="https://www.linkedin.com/in/hyejee-ellis-ms-b5326414b"
                 target="_blank"
                 rel="noopener noreferrer"
               >

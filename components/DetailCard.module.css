@@ -1,0 +1,4 @@
+.detail-card-content > p,
+.detail-card-content > span {
+  text-align: initial !important;
+}

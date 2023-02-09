@@ -11,8 +11,8 @@
 }
 .project p {
   color: black;
-  margin: 30px auto 30px auto;
-  text-align: center;
+  /* margin: 30px auto 30px auto; */
+  /* text-align: center; */
   width: auto;
 }
 .project .nav.nav-pills {

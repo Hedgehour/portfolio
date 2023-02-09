@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-// import Image from "next/image";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
@@ -65,7 +64,7 @@ export const NavBar = () => {
           <span className="navbar-text">
             <div className="social-icon">
               <a
-                href="https://www.linkedin.com/in/hyejee-ellis-b5326414b"
+                href="www.linkedin.com/in/hyejee-ellis-ms-b5326414b"
                 target="_blank"
                 rel="noopener noreferrer"
               >

@@ -10,18 +10,23 @@ import {
 import Image from "next/image";
 import casestudy from "./Assets/Excstudy.png";
 import styles from "./DetailCard.module.css";
-import gamedev from"./Assets/Gamedveimg.jpg";
+import gamedev from "./Assets/Gamedveimg.jpg";
 import productimg from "./Assets/Productimg.jpg";
+
 export const ActionAreaCard = () => {
   return (
-    <Grid container spacing={8}>
-      <Grid item xs={12}>
-        <Card sx={{ maxWidth: 2000, padding: "3rem" }} elevation={4}>
+    <Grid
+      container
+      spacing={8}
+      sx={{ margin: 0, padding: 0 }}
+    >
+      <Grid item xs={12} style={{ paddingLeft: 0 }}>
+        <Card sx={{ padding: "3rem" }} elevation={4}>
           <Image
             src={casestudy}
             component="img"
-            height="300"
-            width="350"
+            height="200"
+            width="250"
             alt="Project Images"
           />
           <CardContent className={styles["detail-card-content"]}>
@@ -55,7 +60,7 @@ export const ActionAreaCard = () => {
               Additionally, this approach has enabled me to prioritize and focus
               on the most important features and goals for the project.
             </Typography>
-            <List component="ol" sx={{ listStyle: "auto" ,ml:4}}>
+            <List component="ol" sx={{ listStyle: "auto", ml: 4 }}>
               <ListItem sx={{ display: "list-item" }}>
                 <Typography variant="body2" gutterBottom>
                   Defining project scope and goals:The first step for me was to
@@ -98,7 +103,12 @@ export const ActionAreaCard = () => {
                 </Typography>
               </ListItem>
             </List>
-            <Typography gutterbottom variant="body2" color="text.secondary" gutterBottom>
+            <Typography
+              gutterbottom
+              variant="body2"
+              color="text.secondary"
+              gutterBottom
+            >
               <b> Results: </b>
               In this personal project, I took an agile/scrum approach to
               creating my personal portfolio website as a demonstration of my
@@ -134,17 +144,17 @@ export const ActionAreaCard = () => {
           </CardContent>
         </Card>
       </Grid>
-      <Grid item xs={12}>
-        <Card sx={{ maxWidth: 2000, padding: "3rem" }} elevation={4}>
+      <Grid item xs={12} style={{ paddingLeft: 0 }}>
+        <Card sx={{ padding: "3rem" }} elevation={4}>
           <Image
             src={gamedev}
             component="img"
-            height="300"
-            width="350"
+            height="200"
+            width="250"
             alt="Project Images"
           />
           <CardContent className={styles["detail-card-content"]}>
-            <Typography variant="h6" component="div"gutterBottom>
+            <Typography variant="h6" component="div" gutterBottom>
               Game Development :<i> In Progress</i>
             </Typography>
             <Typography variant="caption">
@@ -165,17 +175,17 @@ export const ActionAreaCard = () => {
           </CardContent>
         </Card>
       </Grid>
-      <Grid item xs={12}>
-        <Card sx={{ maxWidth: 2000, padding: "3rem" }} elevation={4}>
+      <Grid item xs={12} style={{ paddingLeft: 0 }}>
+        <Card sx={{ padding: "3rem" }} elevation={4}>
           <Image
             src={productimg}
             component="img"
-            height="300"
-            width="350"
+            height="200"
+            width="250"
             alt="Project Images"
           />
           <CardContent className={styles["detail-card-content"]}>
-            <Typography variant="h6" component="div"gutterBottom>
+            <Typography variant="h6" component="div" gutterBottom>
               Future Project : To-Do Application
             </Typography>
             <Typography variant="caption">

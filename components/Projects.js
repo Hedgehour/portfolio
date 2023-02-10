@@ -34,8 +34,8 @@ export const Projects = () => {
   return (
     <section className="project py-5 px-3" id="projects">
       <Container>
-        <Row>
-          <Col size={10}>
+        <Row style={{ marginLeft: 0 }}>
+          <Col size={12}>
             <TrackVisibility>
               {({ isVisible }) => (
                 <div

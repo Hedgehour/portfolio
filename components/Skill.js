@@ -2,6 +2,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
+
 export const Skills = () => {
   const responsive = {
     superLargeDesktop: {
@@ -44,8 +45,9 @@ export const Skills = () => {
               </p>
               <Carousel
                 responsive={responsive}
-                infinite={true}
+                infinite
                 className="skill-slider"
+                autoPlay
               >
                 <div className="item">
                   <i className="devicon-react-original-wordmark dev-icon"></i>
@@ -67,15 +69,16 @@ export const Skills = () => {
                   <i className="devicon-bootstrap-plain-wordmark dev-icon"></i>
                 </div>
                 <div className="items">
-                  <i class="devicon-unity-original-wordmark colored dev-icon"></i>
+                  <i className="devicon-unity-original-wordmark colored dev-icon"></i>
                 </div>
                 <div className="items">
-                  <i class="devicon-csharp-line dev-icon"></i>
+                  <i className="devicon-postgresql-plain-wordmark dev-icon"></i>
                 </div>
                 <div className="items">
-                  <i class="devicon-materialui-plain dev-icon"></i>
+                  <i className="devicon-materialui-plain dev-icon"></i>
                 </div>
-                <div className="items"><i class="devicon-typescript-plain dev-icon"></i></div>
+                <div className="items"><i className="devicon-typescript-plain dev-icon"></i></div>
+                <div className="items"><i className="devicon-mysql-plain-wordmark dev-icon"></i></div>
               </Carousel>
             </div>
           </Col>

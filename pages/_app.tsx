@@ -1,3 +1,4 @@
+import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/globals.css";
 import "./index.css";
 import "../components/Section/Banner.css";

@@ -32,11 +32,11 @@ export const Projects = () => {
             <h2>Projects</h2>
             <p>
               In late 2022, I embarked on a period of skill enhancement, which
-              led to diverse project experiences. I've created engaging mobile
-              games, delved into database architecture and design. My portfolio
-              showcases my versatility and experience as a web developer.
-              Examples of my work span game development, database architecture,
-              and web design.
+              led to diverse project experiences. I{"'"}ve created engaging
+              mobile games, delved into database architecture and design. My
+              portfolio showcases my versatility and experience as a web
+              developer. Examples of my work span game development, database
+              architecture, and web design.
             </p>
             <Row>
               {projects.map((project, index) => {

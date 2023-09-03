@@ -40,8 +40,8 @@ export const Skills = () => {
                 functional and visually pleasing web applications. From
                 front-end development to back-end programming, I have the
                 ability to create dynamic and efficient online experiences.
-                While I'm still learning and growing, here is a list of some of
-                my key skills:
+                While I{"'"}m still learning and growing, here is a list of some
+                of my key skills:
               </p>
               <Carousel
                 responsive={responsive}

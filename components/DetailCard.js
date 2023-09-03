@@ -8,32 +8,29 @@ import {
   ListItem,
 } from "@mui/material";
 import Image from "next/image";
-import casestudy from "./Assets/Excstudy.png";
+import casestudy from "./Assets/portfolio.img.jpg";
 import styles from "./DetailCard.module.css";
-import gamedev from "./Assets/Gamedveimg.jpg";
-import productimg from "./Assets/Productimg.jpg";
 
-export const ActionAreaCard = () => {
+
+
+
+export const WebDetailCard = () => {
   return (
-    <Grid
-      container
-      spacing={8}
-      sx={{ margin: 0, padding: 0 }}
-    >
+    <Grid container spacing={8} sx={{ margin: 0, padding: 0 }}>
       <Grid item xs={12} style={{ paddingLeft: 0 }}>
         <Card sx={{ padding: "3rem" }} elevation={4}>
           <Image
             src={casestudy}
             component="img"
-            height="200"
-            width="250"
+            height="400"
+            width="450"
             alt="Project Images"
           />
           <CardContent className={styles["detail-card-content"]}>
-            <Typography variant="h6" component="div" gutterBottom>
+            <Typography variant="h6" component="div">
               Website Portfolio
             </Typography>
-            <Typography variant="body2" gutterBottom>
+            <Typography variant="body2">
               <b>Background & Purpose: </b>The purpose of this project was to
               create a personal portfolio website to showcase my skills and
               progress as a novice developer. This website will serve as a
@@ -51,7 +48,7 @@ export const ActionAreaCard = () => {
               representation of my growth as a developer and a tool for future
               job opportunities.
             </Typography>
-            <Typography variant="body2" color="text.secondary" gutterBottom>
+            <Typography variant="body2">
               <b>Process: </b>
               To create a personal portfolio effectively and efficiently, I took
               an agile/scrum approach: By using an agile approach, I was able to
@@ -62,7 +59,7 @@ export const ActionAreaCard = () => {
             </Typography>
             <List component="ol" sx={{ listStyle: "auto", ml: 4 }}>
               <ListItem sx={{ display: "list-item" }}>
-                <Typography variant="body2" gutterBottom>
+                <Typography variant="body2">
                   Defining project scope and goals:The first step for me was to
                   clearly define the scope of the project, including the
                   features and functionality that will be included on the
@@ -71,7 +68,7 @@ export const ActionAreaCard = () => {
                 </Typography>
               </ListItem>
               <ListItem sx={{ display: "list-item" }}>
-                <Typography variant="body2" gutterBottom>
+                <Typography variant="body2">
                   Creating a product backlog: the second step I took was to
                   create a product backlog, that contained list of requirements
                   for the portfolio. This included description of each feature,
@@ -79,7 +76,7 @@ export const ActionAreaCard = () => {
                 </Typography>
               </ListItem>
               <ListItem sx={{ display: "list-item" }}>
-                <Typography variant="body2" gutterBottom>
+                <Typography variant="body2">
                   Planning sprints: Using a product backlog (I used Trello), I
                   have planned and organized my work into sprints. My sprints
                   were typically 1-2 weeks, during which I worked on a subset of
@@ -87,13 +84,13 @@ export const ActionAreaCard = () => {
                 </Typography>
               </ListItem>
               <ListItem sx={{ display: "list-item" }}>
-                <Typography variant="body2" gutterBottom>
+                <Typography variant="body2" >
                   Daily stand-ups: during each sprint, I have reviewed the
                   progress, identify and blockers, and planned for the next day.
                 </Typography>
               </ListItem>
               <ListItem sx={{ display: "list-item" }}>
-                <Typography variant="body2" gutterBottom>
+                <Typography variant="body2">
                   Reviewing and demo sprint results: at the end of each sprint,
                   I reviewed and demonstrated the results of the sprint to
                   assess my progress and identify any areas for improvement.This
@@ -103,12 +100,7 @@ export const ActionAreaCard = () => {
                 </Typography>
               </ListItem>
             </List>
-            <Typography
-              gutterbottom
-              variant="body2"
-              color="text.secondary"
-              gutterBottom
-            >
+            <Typography variant="body2">
               <b> Results: </b>
               In this personal project, I took an agile/scrum approach to
               creating my personal portfolio website as a demonstration of my
@@ -128,8 +120,7 @@ export const ActionAreaCard = () => {
               deliver high-quality results within a structured project
               management framework.
             </Typography>
-
-            <Typography variant="body2" color="text.secondary">
+            <Typography variant="body2">
               <b>Technical skills obtained/demonstrated: </b>
               In creating my personal portfolio website, I utilized my knowledge
               of backend programming by developing an API endpoint to allow
@@ -143,70 +134,5 @@ export const ActionAreaCard = () => {
             </Typography>
           </CardContent>
         </Card>
-      </Grid>
-      <Grid item xs={12} style={{ paddingLeft: 0 }}>
-        <Card sx={{ padding: "3rem" }} elevation={4}>
-          <Image
-            src={gamedev}
-            component="img"
-            height="200"
-            width="250"
-            alt="Project Images"
-          />
-          <CardContent className={styles["detail-card-content"]}>
-            <Typography variant="h6" component="div" gutterBottom>
-              Game Development :<i> In Progress</i>
-            </Typography>
-            <Typography variant="caption">
-              In addition to creating my personal portfolio website, I am
-              currently in the process of developing a game to continue learning
-              programming and to showcase my creative side. This project allows
-              me to apply and expand my knowledge of game development and
-              programming concepts, while also exercising my creative abilities.
-              Through the development of this game, I can demonstrate my ability
-              to bring an idea to life and to turn it into a functional and
-              engaging experience for players. Although the game is not yet
-              complete, I am actively working on it and constantly refining my
-              approach to ensure that the result is a high-quality and enjoyable
-              experience for players. This project demonstrates my passion for
-              both programming and game development and highlights my drive to
-              continuously learn and improve my skills.
-            </Typography>
-          </CardContent>
-        </Card>
-      </Grid>
-      <Grid item xs={12} style={{ paddingLeft: 0 }}>
-        <Card sx={{ padding: "3rem" }} elevation={4}>
-          <Image
-            src={productimg}
-            component="img"
-            height="200"
-            width="250"
-            alt="Project Images"
-          />
-          <CardContent className={styles["detail-card-content"]}>
-            <Typography variant="h6" component="div" gutterBottom>
-              Future Project : To-Do Application
-            </Typography>
-            <Typography variant="caption">
-              Along with the game development project, I have also been
-              exploring the idea of developing a To-Do productivity application
-              as a future project to add to my portfolio. This application would
-              allow users to track their tasks and manage their time more
-              efficiently. The development of this application would allow me to
-              showcase my ability to create practical and useful tools for
-              people to improve their daily lives. This project is currently
-              pending and in the development phase, but I am actively
-              researching and planning the best approach to ensure that it meets
-              the needs of users and delivers a high-quality user experience.
-              The development of this to-do productivity application
-              demonstrates my ability to identify a problem and create a
-              solution, as well as my drive to create meaningful and impactful
-              products.
-            </Typography>
-          </CardContent>
-        </Card>
-      </Grid>
-    </Grid>
-  );
-};
+      </Grid> 
+     </Grid> ); };

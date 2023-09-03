@@ -8,7 +8,13 @@ import "../components/Section/Footer.css";
 import type { AppProps } from "next/app";
 import "../components/Contact.css";
 import React from "react";
+import Layout from "../components/Layout";
+
 
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+  return (
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
+  );
 }

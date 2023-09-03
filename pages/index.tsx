@@ -1,7 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import React, { Suspense, useState } from "react";
 import { NavBar } from "../components/Navbar/Navbar";
-
 import { Banner } from "../components/Banner";
 import { Skills } from "../components/Skill";
 import { Projects } from "../components/Projects";
@@ -58,12 +57,10 @@ export default function Home() {
       }}
     >
       <div className="App">
-        <NavBar />
         <Banner />
         <Skills />
         <Projects />
         <Contact />
-        <Footer />
         <Suspense fallback={<></>}>
           <Script
             src={`https://www.google.com/recaptcha/enterprise.js?render=${grecaptchaKeyId}`}

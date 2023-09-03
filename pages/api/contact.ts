@@ -17,7 +17,7 @@ export default async function handler(
     const apiKey = process.env.WHOISXML_API_KEY;
 
     // Extract the email address from the request body
-    const { email } = JSON.parse(req.body);
+    const values = JSON.parse(req.body);
 
     // Captcha validation - check for bots
     const grecaptchaToken = req.headers.authorization;
@@ -46,12 +46,12 @@ export default async function handler(
       return res.status(401).json({ message });
     }
 
-    if (grecaptchaVerifyResult.score < 0.7) {
-      return res.status(401).json({ message: "Captcha Failed" });
-    }
-    
+    // if (grecaptchaVerifyResult.score < 0.7) {
+    //   return res.status(401).json({ message: "Captcha Failed" });
+    // }
+
     // Email Validation
-    const apiUrl = `https://emailverification.whoisxmlapi.com/api/v2?apiKey=${apiKey}&emailAddress=${email}`;
+    const apiUrl = `https://emailverification.whoisxmlapi.com/api/v2?apiKey=${apiKey}&emailAddress=${values.email}`;
     const verificationResponse = await fetch(apiUrl);
 
     if (verificationResponse.status !== 200) {
@@ -70,6 +70,7 @@ export default async function handler(
       return res.status(400).json({ email: "Email is not deliverable" });
     }
 
+    // form submission
     const submissionResponse = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
       headers: {
@@ -77,16 +78,17 @@ export default async function handler(
         Accept: "application/json",
       },
       body: JSON.stringify({
-        ...data,
+        ...values,
         access_key: process.env.WEB3FORMS_API_KEY,
       }),
     });
 
     // if status code is not 200 - Success, throw an error
     if (submissionResponse.status !== 200) {
+      const submissionResponseBody = await submissionResponse.json();
       console.error(
         `Web3forms submission failed - Status Code ${submissionResponse.status}`,
-        submissionResponse.body
+        submissionResponseBody
       );
       throw "Submission Failed - Web3Forms submission status not successful";
     }

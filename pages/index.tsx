@@ -1,4 +1,4 @@
-import "bootstrap/dist/css/bootstrap.min.css";
+
 import React, { Suspense, useState } from "react";
 import { NavBar } from "../components/Navbar/Navbar";
 import { Banner } from "../components/Banner";

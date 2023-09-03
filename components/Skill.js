@@ -2,7 +2,6 @@ import { Container, Row, Col } from "react-bootstrap";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-
 export const Skills = () => {
   const responsive = {
     superLargeDesktop: {
@@ -37,11 +36,12 @@ export const Skills = () => {
             <div className="skill-bx px-3">
               <h2>Skills</h2>
               <p className="py-3">
-                As a developer, I have a wide range of skills that enable me to
-                create functional and visually pleasing web applications. From
+                I possess a wide range of skills that enable me to create
+                functional and visually pleasing web applications. From
                 front-end development to back-end programming, I have the
-                ability to create dynamic and efficient online experiences. Here
-                is a list of some of my key skills that I bring to the table:
+                ability to create dynamic and efficient online experiences.
+                While I'm still learning and growing, here is a list of some of
+                my key skills:
               </p>
               <Carousel
                 responsive={responsive}
@@ -77,8 +77,12 @@ export const Skills = () => {
                 <div className="items">
                   <i className="devicon-materialui-plain dev-icon"></i>
                 </div>
-                <div className="items"><i className="devicon-typescript-plain dev-icon"></i></div>
-                <div className="items"><i className="devicon-mysql-plain-wordmark dev-icon"></i></div>
+                <div className="items">
+                  <i className="devicon-typescript-plain dev-icon"></i>
+                </div>
+                <div className="items">
+                  <i className="devicon-mysql-plain-wordmark dev-icon"></i>
+                </div>
               </Carousel>
             </div>
           </Col>

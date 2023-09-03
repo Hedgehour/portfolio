@@ -11,19 +11,20 @@ import Image from "next/image";
 import casestudy from "./Assets/portfolio.img.jpg";
 import styles from "./DetailCard.module.css";
 
-
-
-
 export const WebDetailCard = () => {
   return (
-    <Grid container spacing={8} sx={{ margin: 0, padding: 0 }}>
+    <Grid
+      container
+      spacing={8}
+      sx={{ margin: 0, padding: 0, width: "inherit" }}
+    >
       <Grid item xs={12} style={{ paddingLeft: 0 }}>
         <Card sx={{ padding: "3rem" }} elevation={4}>
           <Image
             src={casestudy}
             component="img"
-            height="400"
-            width="450"
+            height="200"
+            width="250"
             alt="Project Images"
           />
           <CardContent className={styles["detail-card-content"]}>
@@ -84,7 +85,7 @@ export const WebDetailCard = () => {
                 </Typography>
               </ListItem>
               <ListItem sx={{ display: "list-item" }}>
-                <Typography variant="body2" >
+                <Typography variant="body2">
                   Daily stand-ups: during each sprint, I have reviewed the
                   progress, identify and blockers, and planned for the next day.
                 </Typography>
@@ -134,5 +135,7 @@ export const WebDetailCard = () => {
             </Typography>
           </CardContent>
         </Card>
-      </Grid> 
-     </Grid> ); };
+      </Grid>
+    </Grid>
+  );
+};

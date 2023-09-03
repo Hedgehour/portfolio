@@ -28,77 +28,83 @@ export const NavBar = () => {
         style={{ width: "100%" }}
       >
         <Navbar.Brand>
-          <Link href="/" className="nav-link" style={{ color: "//#endregion616f76" }}>
+          <Link
+            href="/"
+            className="nav-link"
+            style={{ color: "//#endregion616f76" }}
+          >
             HedgeHour
           </Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            {router.pathname === "/" ? (
-              <>
-                <Link
-                  href="/"
-                  className={
-                    activeLink === "home" ? "active navbar-link nav-link nav-link" : "navbar-link nav-link nav-link"
-                  }
-                  onClick={() => onUpdateActiveLink("home")}
-                  style={{ color: "//#endregion616f76" }}
-                >
-                  Home
-                </Link>
-                <Link
-                  href="#skills"
-                  className={
-                    activeLink === "skills"
-                      ? "active navbar-link nav-link"
-                      : "navbar-link nav-link"
-                  }
-                  onClick={() => onUpdateActiveLink("skills")}
-                  style={{ color: "//#endregion616f76" }}
-                >
-                  Skills
-                </Link>
-                <Link
-                  href="#projects"
-                  className={
-                    activeLink === "projects"
-                      ? "active navbar-link nav-link"
-                      : "navbar-link nav-link"
-                  }
-                  onClick={() => onUpdateActiveLink("projects")}
-                  style={{ color: "//#endregion616f76" }}
-                >
-                  Projects
-                </Link>
-              </>
-            ) : null}
-          </Nav>
-          <span className="navbar-text">
-            <div className="social-icon">
-              <a
-                href="https://www.linkedin.com/in/hyejee-ellis-m-s-b5326414b"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <LinkedInIcon className="linkedin-icon" />
-              </a>
-              <a
-                href="https://github.com/Hedgehour"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <GitHubIcon className="Gethub-icon" />
-              </a>
-            </div>
-            <a href="#connect">
-              <button className="vvd" onClick={() => console.log("connect")}>
-                <span>Let&apos;s Connect</span>{" "}
-              </button>
-            </a>
-          </span>
-        </Navbar.Collapse>
       </div>
+      <Navbar.Collapse id="basic-navbar-nav" className="pt-2 pb-4 px-4">
+        <Nav className="me-auto">
+          {router.pathname === "/" ? (
+            <>
+              <Link
+                href="/"
+                className={
+                  activeLink === "home"
+                    ? "active navbar-link nav-link nav-link"
+                    : "navbar-link nav-link nav-link"
+                }
+                onClick={() => onUpdateActiveLink("home")}
+                style={{ color: "//#endregion616f76" }}
+              >
+                Home
+              </Link>
+              <Link
+                href="#skills"
+                className={
+                  activeLink === "skills"
+                    ? "active navbar-link nav-link"
+                    : "navbar-link nav-link"
+                }
+                onClick={() => onUpdateActiveLink("skills")}
+                style={{ color: "//#endregion616f76" }}
+              >
+                Skills
+              </Link>
+              <Link
+                href="#projects"
+                className={
+                  activeLink === "projects"
+                    ? "active navbar-link nav-link"
+                    : "navbar-link nav-link"
+                }
+                onClick={() => onUpdateActiveLink("projects")}
+                style={{ color: "//#endregion616f76" }}
+              >
+                Projects
+              </Link>
+            </>
+          ) : null}
+        </Nav>
+        <span className="navbar-text">
+          <div className="social-icon">
+            <a
+              href="https://www.linkedin.com/in/hyejee-ellis-m-s-b5326414b"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <LinkedInIcon className="linkedin-icon" />
+            </a>
+            <a
+              href="https://github.com/Hedgehour"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <GitHubIcon className="Gethub-icon" />
+            </a>
+          </div>
+          <a href="#connect">
+            <button className="vvd" onClick={() => console.log("connect")}>
+              <span>Let&apos;s Connect</span>{" "}
+            </button>
+          </a>
+        </span>
+      </Navbar.Collapse>
     </Navbar>
   );
 };

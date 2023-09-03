@@ -20,8 +20,8 @@ export const GameDetailCard = () => {
   <Image
     src={gamedev}
     component="img"
-    height="400"
-    width="450"
+    height="200"
+    width="250"
     alt="Project Images"
   />
   <CardContent className={styles["detail-card-content"]}>

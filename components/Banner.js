@@ -64,21 +64,19 @@ export const Banner = () => {
                     {"Hello I'm Hyejee, "} <span className="wrap"> {text}</span>
                   </h1>
                   <h5>
-                    From analyzing business trends to creating website gems,
-                    I have rolled up tight and transformed into the
-                    hedgehog of web development, bringing my business acumen
-                    to the digital world!
+                    From analyzing business trends to creating website gems, I
+                    have rolled up tight and transformed into the hedgehog of
+                    web development, bringing my business acumen to the digital
+                    world!
                   </h5>
                   <p>
-                    I am Hyejee (aka HedgeHour), the hedgehog of web
-                    development. I may be new to the game, but I bring a fresh
-                    perspective to every project and I am eager to learn new
-                    things and find innovative solutions. As a novice web
-                    developer, I am still learning the ropes, but I have already
-                    been able to create functional and visually pleasing
-                    websites and various applications. I am a team player and I
-                    am always looking for ways to learn from my collogues and
-                    improve my skills.
+                    I'm Hyejee, also known as HedgeHour, the web development
+                    enthusiast. While I'm relatively new to the field, I offer a
+                    fresh perspective and a strong desire to learn and innovate.
+                    As a novice web developer, I've already crafted functional
+                    and visually appealing websites and applications. I'm a team
+                    player, eager to collaborate and enhance my skills through
+                    colleagues' insights.
                   </p>
                   <p>
                     When I am not coding, I enjoy spending time with my three

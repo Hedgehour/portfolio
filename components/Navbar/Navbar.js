@@ -22,7 +22,7 @@ export const NavBar = () => {
   };
 
   return (
-    <Navbar expand="lg" className={scrollY >= 50 ? "scrolled" : ""}>
+    <Navbar expand={false} className={scrollY >= 50 ? "scrolled" : ""}>
       <div
         className="d-flex justify-content-between align-items-center px-4 py-2"
         style={{ width: "100%" }}

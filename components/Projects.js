@@ -10,13 +10,13 @@ const projects = [
   },
 
   {
-    title: "Game Development",
+    title: "Game Development & Other Applications",
     description: "Design & Development in progress",
     image: "/Demo-bro.svg",
     link: "/projects/game-dev",
   },
   {
-    title: "Database Architecture",
+    title: "Database Architecture & Data Analysis",
     description: "Design & Development",
     image: "/Notes-bro.svg",
     link: "/projects/dbarch-dev",

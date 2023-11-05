@@ -13,12 +13,8 @@ import styles from "./DetailCard.module.css";
 
 export const WebDetailCard = () => {
   return (
-    <Grid
-      container
-      spacing={8}
-      sx={{ margin: 0, padding: 0, width: "inherit" }}
-    >
-      <Grid item xs={12} style={{ paddingLeft: 0 }}>
+    <Grid container spacing={5} sx={{ p: 5 }}>
+      <Grid item xs={12} md={12}>
         <Card sx={{ padding: "3rem" }} elevation={4}>
           <Image
             src={casestudy}

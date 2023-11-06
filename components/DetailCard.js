@@ -15,7 +15,7 @@ export const WebDetailCard = () => {
   return (
     <Grid container spacing={5} sx={{ p: 5 }}>
       <Grid item xs={12} md={12}>
-        <Card sx={{ padding: "3rem" }} elevation={4}>
+        <Card sx={{ padding: "1rem" }} elevation={4}>
           <Image
             src={casestudy}
             component="img"

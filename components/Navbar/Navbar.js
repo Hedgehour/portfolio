@@ -31,7 +31,6 @@ export const NavBar = () => {
           <Link
             href="/"
             className="nav-link"
-            style={{ color: "//#endregion616f76" }}
           >
             HedgeHour
           </Link>

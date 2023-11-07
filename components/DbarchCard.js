@@ -9,10 +9,11 @@ import {
 } from "@mui/material";
 import Image from "next/image";
 import styles from "./DetailCard.module.css";
-import Erd from "./Assets/ERD Diagram.png";
-import line from "./Assets/LineGraph.png";
-import ScPlot from "./Assets/ScatterPlot.png";
+import Erd from "./Assets/ERD Diagram.jpg";
+import Bar from "./Assets/Bar.png";
+import area from "./Assets/area.png";
 import ScBub from "./Assets/ScatterBub.png";
+import pie from "./Assets/Pie.png";
 
 import { CodeBlock } from "react-code-blocks";
 
@@ -59,10 +60,10 @@ enhance my skills and contribute to efficient data management.`,
   queries to generate valuable insights. The result was a
   comprehensive view of the anime industry, showcasing the various
   studios and their respective contributions, as visualized through
-  a scatter plot. This allowed us to identify key players in the
+  a bar graph. This allowed us to identify key players in the
   field and gain a deeper understanding of their production
   histories.`,
-    image: line,
+    image: Bar,
   },
   {
     text: ` Building upon the foundation of the combined and queried datasets,
@@ -75,7 +76,7 @@ enhance my skills and contribute to efficient data management.`,
   providing valuable insights into the industry's temporal dynamics.
   The data cleaning step was pivotal in ensuring the accuracy and
   reliability of the findings.`,
-    image: ScPlot,
+    image: area,
   },
   {
     text: `As part of our comprehensive analysis, I also sought to understand
@@ -96,6 +97,15 @@ enhance my skills and contribute to efficient data management.`,
   relative to the overall dataset, providing a robust statistical
   basis for our findings and ensuring the integrity of our analysis.`,
     image: ScBub,
+  },
+  {
+    text: `The pie chart titled "Anime Distribution by Genre" provides a visual representation of the number of anime produced across different genres. It offers a concise overview of how the anime industry is distributed among various genres, helping us understand the popularity of different anime themes.
+    Most Popular Genre: The genre with the largest segment indicates the most popular genre of anime, as it has the highest count of anime productions.
+Less Common Genres: Smaller segments reveal less common genres, indicating the variety within the anime industry.
+Genre Diversity: The pie chart illustrates the diversity and richness of anime, as it spans a wide range of genres, each catering to different preferences.A significant observation from the chart is that many of the genres are classified as "Mature Themes," and they collectively represent a substantial portion of the anime produced. This suggests that mature and thought-provoking themes are prevalent in the anime industry, and numerous anime productions explore these complex and adult-oriented narratives. While some genres cater to younger audiences and family-friendly themes, the diversity of mature themes highlights the depth and sophistication of storytelling within the world of anime. **
+Please note that It's important to acknowledge that the chart may not represent the anime industry as a whole. Some anime productions may not be categorized into specific genres, resulting in an underrepresentation of these works. As a result, the chart provides insights into the categorized genre preferences of the industry but may not capture the entirety of anime production.
+Despite this limitation, the chart remains a valuable tool for understanding the distribution of categorized anime genres, offering valuable insights for enthusiasts and analysts. To gain a comprehensive view of the industry, it may be necessary to consider uncategorized or unclassified anime productions in addition to the genres displayed in the chart.`,
+    image: pie,
   },
 ];
 const technicalSkills = [
@@ -174,7 +184,7 @@ export const DbarchDetailCard = () => {
         <Card sx={{ padding: "1rem" }} elevation={4}>
           <CardContent className={styles["detail-card-content"]}>
             <Typography variant="h6" gutterBottom>
-              Project Description: Creating a Custom Dashboard for Analyzing
+              Project Description: Analyzing
               Kaggle Dataset Using PostgreSQL and Python
             </Typography>
             {projectDescript.map(({ header, text, image }, index) => (

@@ -1,0 +1,57 @@
+---
+import Timeline, { type TimelineItem } from "./Timeline.astro";
+
+ const timelineItems: TimelineItem[] = [
+  {
+    company:"IQVIA",
+    startYear: 2021,
+    endYear: 2022,
+    title: "IT Business Process Consultant II",
+    description:
+      "Strategically directed the evolution of IT policies, crafted innovative strategies, and formulated product roadmaps for registry programs, seamlessly integrating data expertise with cross-functional leadership.",
+  },
+  {
+    company: "OneAmerica Fiancial Partners",
+    startYear: 2020,
+    endYear: 2021,
+    title: 'IT Business Intelligence Analyst',
+    description: 'Applied data analysis in agile project leadership, leveraging insights to define system requirements and elevate user experience across diverse projects.'
+  },
+  {
+    company: "Guidon Design",
+    startYear: 2018,
+    endYear: 2019,
+    title: 'Business Systems Analyst',
+    description: 'Optimized CRM integration through data analysis, spearheading the unification of financial, marketing, and business data. Utilized insights to streamline and enhance data structures, fostering improved accessibility and insights across departments.'
+  },
+  {
+    company:"Indiana State Department of Health",
+    startYear: 2019,
+    endYear: 2018,
+    title: 'Program Associate',
+    description: 'Efficiently managed the integration of incoming lab reports into the CDC information system, bolstering state and federal disease management initiatives. Elevated workflow processes, interstate communication, and employee workflow by applying Lean Six Sigma expertise alongside strong professional communication skills.'
+  },{
+    company:"Burmese American Community Institute",
+    startYear: 2016,
+    endYear: 2017,
+    title: 'Business Development Associate',
+    description: 'Established and nurtured diverse partnerships, including collaborations with local entities and university hospitals, to orchestrate inclusive events. Successfully organized impactful community programs, fostering engagement and advocacy initiatives that directly benefited a substantial number of individuals.'
+  }
+];
+
+const middleIndex = Math.ceil(timelineItems.length / 2);
+const leftTimelineItems = timelineItems.slice(0, middleIndex);
+const rightTimelineItems = timelineItems.slice(middleIndex);
+---
+
+<section class="bg-[#f4eee4]">
+    <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+        <div class="max-w-screen-lg text-black sm:text-lg">
+            <h2 class="mb-4 text-4xl tracking-tight font-bold text-center text-[#88560f]">My Work Experience </h2>
+        </div>
+        <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
+            <Timeline items={leftTimelineItems} />
+            <Timeline items={rightTimelineItems} />
+        </div>
+    </div>
+  </section>

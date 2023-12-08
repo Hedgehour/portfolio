@@ -1,9 +1,9 @@
 ---
 import Timeline, { type TimelineItem } from "./Timeline.astro";
 
- const timelineItems: TimelineItem[] = [
+const timelineItems: TimelineItem[] = [
   {
-    company:"IQVIA",
+    company: "IQVIA",
     startYear: 2021,
     endYear: 2022,
     title: "IT Business Process Consultant II",
@@ -14,29 +14,34 @@ import Timeline, { type TimelineItem } from "./Timeline.astro";
     company: "OneAmerica Fiancial Partners",
     startYear: 2020,
     endYear: 2021,
-    title: 'IT Business Intelligence Analyst',
-    description: 'Applied data analysis in agile project leadership, leveraging insights to define system requirements and elevate user experience across diverse projects.'
+    title: "IT Business Intelligence Analyst",
+    description:
+      "Applied data analysis in agile project leadership, leveraging insights to define system requirements and elevate user experience across diverse projects.",
   },
   {
     company: "Guidon Design",
     startYear: 2018,
     endYear: 2019,
-    title: 'Business Systems Analyst',
-    description: 'Optimized CRM integration through data analysis, spearheading the unification of financial, marketing, and business data. Utilized insights to streamline and enhance data structures, fostering improved accessibility and insights across departments.'
+    title: "Business Systems Analyst",
+    description:
+      "Optimized CRM integration through data analysis, spearheading the unification of financial, marketing, and business data. Utilized insights to streamline and enhance data structures, fostering improved accessibility and insights across departments.",
   },
   {
-    company:"Indiana State Department of Health",
+    company: "Indiana State Department of Health",
     startYear: 2019,
     endYear: 2018,
-    title: 'Program Associate',
-    description: 'Efficiently managed the integration of incoming lab reports into the CDC information system, bolstering state and federal disease management initiatives. Elevated workflow processes, interstate communication, and employee workflow by applying Lean Six Sigma expertise alongside strong professional communication skills.'
-  },{
-    company:"Burmese American Community Institute",
+    title: "Program Associate",
+    description:
+      "Efficiently managed the integration of incoming lab reports into the CDC information system, bolstering state and federal disease management initiatives. Elevated workflow processes, interstate communication, and employee workflow by applying Lean Six Sigma expertise alongside strong professional communication skills.",
+  },
+  {
+    company: "Burmese American Community Institute",
     startYear: 2016,
     endYear: 2017,
-    title: 'Business Development Associate',
-    description: 'Established and nurtured diverse partnerships, including collaborations with local entities and university hospitals, to orchestrate inclusive events. Successfully organized impactful community programs, fostering engagement and advocacy initiatives that directly benefited a substantial number of individuals.'
-  }
+    title: "Business Development Associate",
+    description:
+      "Established and nurtured diverse partnerships, including collaborations with local entities and university hospitals, to orchestrate inclusive events. Successfully organized impactful community programs, fostering engagement and advocacy initiatives that directly benefited a substantial number of individuals.",
+  },
 ];
 
 const middleIndex = Math.ceil(timelineItems.length / 2);
@@ -44,14 +49,45 @@ const leftTimelineItems = timelineItems.slice(0, middleIndex);
 const rightTimelineItems = timelineItems.slice(middleIndex);
 ---
 
-<section class="bg-[#f4eee4]">
-    <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
-        <div class="max-w-screen-lg text-black sm:text-lg">
-            <h2 class="mb-4 text-4xl tracking-tight font-bold text-center text-[#88560f]">My Work Experience </h2>
-        </div>
-        <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
-            <Timeline items={leftTimelineItems} />
-            <Timeline items={rightTimelineItems} />
-        </div>
+<section class="bg-white">
+  <div class=" py-8 px-4 mx-auto max-w-screen-xl lg:py-12 lg:px-6">
+    <div
+      class="flex items-center justify-center space-x-4 items-centermax-w-screen-lg text-black sm:text-lg"
+    >
+      <h2 class="mb-4 text-4xl tracking-tight font-bold text-center text-black"
+      > My Work Experience
+      </h2> <svg
+      class="w-7 h-7 text-[#6e776e] inline-flex mb-4"
+      aria-hidden="true"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="currentColor"
+      viewBox="0 0 20 20"
+      
+    >
+    <p class="mb-4 text-gray-800"> With over 5 years of experience in the IT field, I bring a unique fusion
+        of technical expertise and business acumen to the table. My proficiency
+        in software development enables me to seamlessly bridge the gap between
+        technology and business strategy, consistently achieving successful
+        outcomes. I excel at transforming intricate data into actionable
+        insights and crafting user-friendly solutions. Beyond that, my
+        unwavering commitment extends to incorporating the latest cybersecurity
+        techniques, ensuring the utmost safety and security of client data in
+        all solutions. As a creative problem-solver and effective communicator,
+        I take pride in consistently surpassing expectations, delivering results
+        that embody innovation and excellence.</p>
+      <path
+        d="M19.728 10.686c-2.38 2.256-6.153 3.381-9.875 3.381-3.722 0-7.4-1.126-9.571-3.371L0 10.437V18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-7.6l-.272.286Z"
+      ></path>
+      <path
+        d="m.135 7.847 1.542 1.417c3.6 3.712 12.747 3.7 16.635.01L19.605 7.9A.98.98 0 0 1 20 7.652V6a2 2 0 0 0-2-2h-3V3a3 3 0 0 0-3-3H8a3 3 0 0 0-3 3v1H2a2 2 0 0 0-2 2v1.765c.047.024.092.051.135.082ZM10 10.25a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5ZM7 3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1H7V3Z"
+      ></path>
+    </svg>
     </div>
-  </section>
+    <div
+      class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6"
+    >
+      <Timeline items={leftTimelineItems} />
+      <Timeline items={rightTimelineItems} />
+    </div>
+  </div>
+</section>

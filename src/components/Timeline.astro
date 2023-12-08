@@ -14,11 +14,11 @@ interface Props {
 const { items } = Astro.props;
 ---
 
-<ol class="relative border-s-2 border-[#125767]">
+<ol class="relative border-dotted border-s-4 border-[#88560f]">
   {
     items.map((item) => (
       <li class="mb-10 ms-4">
-        <div class="absolute w-4 h-4 bg-[#88560f] rounded-full mt-2 -start-2 border border-white"></div>
+        <div class="absolute w-5 h-5 bg-[#88560f] rounded-full mt-2 -start-3 border-2 border-[#fbfefd]"></div>
         <h3 class="mb-1 text-sm font-normal leading-none text-gray-900"> {item.company} </h3>
         <time class="mb-1 text-sm font-normal leading-none text-gray-400">
           {item.startYear}-{item.endYear}
@@ -28,7 +28,7 @@ const { items } = Astro.props;
         <h3 class="text-lg font-semibold text-[#125767]">
           {item.title}
         </h3>
-        <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
+        <p class="mb-4 text-base font-normal text-gray-500 ">
           {item.description}
         </p>
         <a>

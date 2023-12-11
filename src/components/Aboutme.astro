@@ -1,68 +1,168 @@
 ---
-
-
+import AboutMeCard from "./AboutMeCard.astro";
+import AboutMeIcon from "./AboutMeIcon.astro";
+import Skills from "./Skills.astro";
 ---
-  
-  
-  
-  
-  <section class="bg-[#dbdad4] dark:bg-gray-900">
-    <div class="gap-16 items-inline py-8 px-4 mx-auto max-w-screen-xl md:grid md:grid-cols-2 ">
-        <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
-            <h2 class="mb-4 text-4xl tracking-tight  font-extrabold text-gray-900 dark:text-white">Hello, I'm Hyejee</h2>
-            <p class="mb-4 text-gray-800">
-                I'm Hyejee, also known as HedgeHour, the web development enthusiast.
-                While I'm relatively new to the field, I offer a fresh perspective and a
-                strong desire to learn and innovate. As a novice web developer, I've
-                already crafted functional and visually appealing websites and
-                applications. I'm a team player, eager to collaborate and enhance my
-                skills through colleagues' insights. </p>
-        </div>
-        
-      <div class="mb-4 border-b border-gray-200 dark:border-gray-700">
-        <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="default-tab" data-tabs-toggle="#default-tab-content" role="tablist">
-        <li class="me-2" role="presentation">
-            <button class="inline-block p-4 border-b-2 rounded-t-lg" id="profile-tab" data-tabs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button> <div class="  gap-4 mt-8  "> 
-        </li>
-        <li class="me-2" role="presentation">
-            <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="experience-tab" data-tabs-target="#experience" type="button" role="tab" aria-controls="dashboard" aria-selected="false">Experience</button>
-        </li>
-        <li class="me-2" role="presentation">
-            <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="skills-tab" data-tabs-target="#skills" type="button" role="tab" aria-controls="skills" aria-selected="false">Skills</button>
-        </li>
-        <li role="presentation">
-            <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="education-tab" data-tabs-target="#education" type="button" role="tab" aria-controls="education" aria-selected="false">Education</button>
-         </li>
-         </ul>
-         
-      </div>
 
-      <div id="default-tab-content">
-        <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-            <p class="text-sm text-gray-500 dark:text-gray-400">This is some placeholder content the <strong class="font-medium text-gray-800 dark:text-white">Profile tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
-        </div>
-        <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="experience" role="tabpanel" aria-labelledby="experience-tab">
-            <p class="text-sm text-gray-500 dark:text-gray-400">This is some placeholder content the <strong class="font-medium text-gray-800 dark:text-white">Dashboard tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
-        </div>
-        <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="skills" role="tabpanel" aria-labelledby="skills-tab">
-            <p class="text-sm text-gray-500 dark:text-gray-400">This is some placeholder content the <strong class="font-medium text-gray-800 dark:text-white">Settings tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
-        </div>
-        <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="education" role="tabpanel" aria-labelledby="education-tab">
-            <p class="text-sm text-gray-500 dark:text-gray-400">This is some placeholder content the <strong class="font-medium text-gray-800 dark:text-white">Contacts tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
-        </div>
+<section class="bg-[#dbdad4] dark:bg-gray-900 min-h-[60vh]">
+  <div
+    class="gap-16 items-inline py-8 px-4 mx-auto max-w-screen-xl grid grid-cols-1 lg:grid-cols-2"
+  >
+    <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
+      <h2
+        class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
+      >
+        Hello, I'm Hyejee
+      </h2>
+      <p class="mb-4 text-gray-800">
+        I'm Hyejee, also known as HedgeHour, the web development enthusiast.
+        While I'm relatively new to the field, I offer a fresh perspective and a
+        strong desire to learn and innovate. As a novice web developer, I've
+        already crafted functional and visually appealing websites and
+        applications. I'm a team player, eager to collaborate and enhance my
+        skills through colleagues' insights.
+      </p>
     </div>
-</div>
 
+    <div class="relative flex items-flexstart justify-center">
+      <ul class="mx-auto grid max-w-full w-full grid-cols-3 gap-3 px-8">
+        <li class="">
+          <input
+            class="peer sr-only"
+            type="radio"
+            value="yes"
+            name="answer"
+            id="yes"
+            checked
+          />
+          <label
+            class="flex justify-center cursor-pointer rounded-full border border-gray-300 bg-white py-2 px-4 hover:bg-gray-50 focus:outline-none peer-checked:border-transparent peer-checked:ring-2 peer-checked:ring-[#88560f] transition-all duration-500 ease-in-out"
+            for="yes">Profile</label
+          >
 
-<svg class="justify-center w-[43px] h-[43px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-    <path d="M19.728 10.686c-2.38 2.256-6.153 3.381-9.875 3.381-3.722 0-7.4-1.126-9.571-3.371L0 10.437V18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-7.6l-.272.286Z"/>
-    <path d="m.135 7.847 1.542 1.417c3.6 3.712 12.747 3.7 16.635.01L19.605 7.9A.98.98 0 0 1 20 7.652V6a2 2 0 0 0-2-2h-3V3a3 3 0 0 0-3-3H8a3 3 0 0 0-3 3v1H2a2 2 0 0 0-2 2v1.765c.047.024.092.051.135.082ZM10 10.25a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5ZM7 3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1H7V3Z"/></svg>
-    <h3 class="text-lg font-semibold text-[#125767] "> 5+ years of expereince</h3> 
-    <svg class="  w-[43px] h-[43px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-    <path fill="currentColor" d="m18.774 8.245-.892-.893a1.5 1.5 0 0 1-.437-1.052V5.036a2.484 2.484 0 0 0-2.48-2.48H13.7a1.5 1.5 0 0 1-1.052-.438l-.893-.892a2.484 2.484 0 0 0-3.51 0l-.893.892a1.5 1.5 0 0 1-1.052.437H5.036a2.484 2.484 0 0 0-2.48 2.481V6.3a1.5 1.5 0 0 1-.438 1.052l-.892.893a2.484 2.484 0 0 0 0 3.51l.892.893a1.5 1.5 0 0 1 .437 1.052v1.264a2.484 2.484 0 0 0 2.481 2.481H6.3a1.5 1.5 0 0 1 1.052.437l.893.892a2.484 2.484 0 0 0 3.51 0l.893-.892a1.5 1.5 0 0 1 1.052-.437h1.264a2.484 2.484 0 0 0 2.481-2.48V13.7a1.5 1.5 0 0 1 .437-1.052l.892-.893a2.484 2.484 0 0 0 0-3.51Z"/>
-    <path fill="#fff" d="M8 13a1 1 0 0 1-.707-.293l-2-2a1 1 0 1 1 1.414-1.414l1.42 1.42 5.318-3.545a1 1 0 0 1 1.11 1.664l-6 4A1 1 0 0 1 8 13Z"/></svg> 
-    <h3 class="text-lg font-semibold text-[#125767] "> 4 IT Certifications</h3>
-    <svg class="w-[43px] h-[43px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
-      <path d="M16 1h-3.278A1.992 1.992 0 0 0 11 0H7a1.993 1.993 0 0 0-1.722 1H2a2 2 0 0 0-2 2v15a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2ZM7 2h4v3H7V2Zm5.7 8.289-3.975 3.857a1 1 0 0 1-1.393 0L5.3 12.182a1.002 1.002 0 1 1 1.4-1.436l1.328 1.289 3.28-3.181a1 1 0 1 1 1.392 1.435Z"/>
-    </svg><h3 class="text-lg font-semibold text-[#125767] "> 50+ projects </h3>
+          <AboutMeCard>
+            <div class="item-center grid grid-cols-3 gap-8">
+              <AboutMeIcon>
+                <svg
+                  class="justify-center w-[43px] h-[43px] text-gray-800 dark:text-white"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M19.728 10.686c-2.38 2.256-6.153 3.381-9.875 3.381-3.722 0-7.4-1.126-9.571-3.371L0 10.437V18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-7.6l-.272.286Z"
+                  ></path>
+                  <path
+                    d="m.135 7.847 1.542 1.417c3.6 3.712 12.747 3.7 16.635.01L19.605 7.9A.98.98 0 0 1 20 7.652V6a2 2 0 0 0-2-2h-3V3a3 3 0 0 0-3-3H8a3 3 0 0 0-3 3v1H2a2 2 0 0 0-2 2v1.765c.047.024.092.051.135.082ZM10 10.25a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5ZM7 3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1H7V3Z"
+                  ></path></svg
+                >
+                <h3
+                  slot="text"
+                  class="text-lg font-semibold text-[#125767] text-center"
+                >
+                  5+ years of expereince
+                </h3>
+              </AboutMeIcon>
+
+              <AboutMeIcon>
+                <svg
+                  class="w-[43px] h-[43px] text-gray-800 dark:text-white"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill="currentColor"
+                    d="m18.774 8.245-.892-.893a1.5 1.5 0 0 1-.437-1.052V5.036a2.484 2.484 0 0 0-2.48-2.48H13.7a1.5 1.5 0 0 1-1.052-.438l-.893-.892a2.484 2.484 0 0 0-3.51 0l-.893.892a1.5 1.5 0 0 1-1.052.437H5.036a2.484 2.484 0 0 0-2.48 2.481V6.3a1.5 1.5 0 0 1-.438 1.052l-.892.893a2.484 2.484 0 0 0 0 3.51l.892.893a1.5 1.5 0 0 1 .437 1.052v1.264a2.484 2.484 0 0 0 2.481 2.481H6.3a1.5 1.5 0 0 1 1.052.437l.893.892a2.484 2.484 0 0 0 3.51 0l.893-.892a1.5 1.5 0 0 1 1.052-.437h1.264a2.484 2.484 0 0 0 2.481-2.48V13.7a1.5 1.5 0 0 1 .437-1.052l.892-.893a2.484 2.484 0 0 0 0-3.51Z"
+                  ></path>
+                  <path
+                    fill="#fff"
+                    d="M8 13a1 1 0 0 1-.707-.293l-2-2a1 1 0 1 1 1.414-1.414l1.42 1.42 5.318-3.545a1 1 0 0 1 1.11 1.664l-6 4A1 1 0 0 1 8 13Z"
+                  ></path></svg
+                >
+                <h3
+                  slot="text"
+                  class="text-lg font-semibold text-[#125767] text-center"
+                >
+                  4 IT Certifications
+                </h3>
+              </AboutMeIcon>
+              <AboutMeIcon>
+                <svg
+                  class="w-[43px] h-[43px] text-gray-800 dark:text-white"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 18 20"
+                >
+                  <path
+                    d="M16 1h-3.278A1.992 1.992 0 0 0 11 0H7a1.993 1.993 0 0 0-1.722 1H2a2 2 0 0 0-2 2v15a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2ZM7 2h4v3H7V2Zm5.7 8.289-3.975 3.857a1 1 0 0 1-1.393 0L5.3 12.182a1.002 1.002 0 1 1 1.4-1.436l1.328 1.289 3.28-3.181a1 1 0 1 1 1.392 1.435Z"
+                  ></path>
+                </svg><h3
+                  slot="text"
+                  class="text-lg font-semibold text-[#125767] text-center"
+                >
+                  50+ projects
+                </h3>
+              </AboutMeIcon>
+            </div>
+          </AboutMeCard>
+
+          <li class="">
+            <input
+              class="peer sr-only"
+              type="radio"
+              value="no"
+              name="answer"
+              id="no"
+            />
+            <label
+              class="flex justify-center cursor-pointer rounded-full border border-gray-300 bg-white py-2 px-4 hover:bg-gray-50 focus:outline-none peer-checked:border-transparent peer-checked:ring-2 peer-checked:ring-[#88560f] transition-all duration-500 ease-in-out"
+              for="no">Education</label
+            >
+
+            <AboutMeCard>
+              <h2 class="text-lg font-semibold text-[#125767]">
+                Master of Science
+              </h2>
+              <h3 class="text-md font-bold text-[#125767]">
+                Cybersecurity Policy & Management
+              </h3>
+              <p class="text-base font-normal text-gray-500 mb-5">
+                University of Maryland Global Campus
+              </p>
+              <h2 class="text-lg font-semibold text-[#125767]">
+                Bachelor of Science
+              </h2>
+              <h3 class="text-md font-bold text-[#125767]">
+                Health Services Management
+              </h3>
+              <p class="text-base font-normal text-gray-500">
+                Indiana University
+              </p>
+            </AboutMeCard>
+          </li>
+
+          <li class="">
+            <input
+              class="peer sr-only"
+              type="radio"
+              value="yesno"
+              name="answer"
+              id="yesno"
+            />
+            <label
+              class="flex justify-center cursor-pointer rounded-full border border-gray-300 bg-white py-2 px-4 hover:bg-gray-50 focus:outline-none peer-checked:border-transparent peer-checked:ring-2 peer-checked:ring-[#88560f] transition-all duration-500 ease-in-out"
+              for="yesno">Skills</label
+            >
+            <AboutMeCard>
+              <Skills />
+            </AboutMeCard>
+          </li>
+        </li>
+      </ul>
+    </div>
+  </div>
 </section>

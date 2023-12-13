@@ -1,7 +1,7 @@
 ---
 export interface TimelineItem {
   company: string;
-startYear: number;
+  startYear: number;
   endYear: number;
   title: string;
   description: string;
@@ -14,20 +14,24 @@ interface Props {
 const { items } = Astro.props;
 ---
 
-<ol class="relative border-dotted border-s-4 border-[#88560f]">
+<ol class="relative border-s border-gray-200">
   {
     items.map((item) => (
       <li class="mb-10 ms-4">
-        <div class="absolute w-5 h-5 bg-[#88560f] rounded-full mt-2 -start-3 border-2 border-[#fbfefd]"></div>
-        <h3 class="mb-1 text-sm font-normal leading-none text-gray-900"> {item.company} </h3>
-        <time class="mb-1 text-sm font-normal leading-none text-gray-400">
-          {item.startYear}-{item.endYear}
-        </time>
-       
-       
-        <h3 class="text-lg font-semibold text-[#125767]">
-          {item.title}
+        <div class="absolute w-4 h-4 bg-[#d2ac92] rounded-full -start-2  " />
+        <h3 class="mb-1 text-md font-normal leading-none text-[#5a6252]">
+          {" "}
+          {item.company}{" "}
+          <time class="mb-1 text-sm font-normal leading-none text-gray-400">
+            {item.startYear}-{item.endYear}
+          </time>
         </h3>
+
+        <div class=" bg-[#5a6252] rounded-xl px-2 py-2">
+          {" "}
+          <h3 class="text-lg font-semibold  text-white">{item.title}</h3>
+        </div>
+
         <p class="mb-4 text-base font-normal text-gray-500 ">
           {item.description}
         </p>

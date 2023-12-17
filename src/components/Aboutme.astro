@@ -4,24 +4,40 @@ import AboutMeIcon from "./AboutMeIcon.astro";
 import Skills from "./Skills.astro";
 ---
 
-<section class="bg-[#dbdad4] dark:bg-gray-900 min-h-[60vh]">
+<section class="bg-white min-h-[60vh]" id="aboutme">
   <div
     class="gap-16 items-inline py-8 px-4 mx-auto max-w-screen-xl grid grid-cols-1 lg:grid-cols-2"
   >
-    <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
-      <h2
-        class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
+    <div class="font-light text-gray-500 sm:text-lg">
+      <a
+        class="block max-w-full p-6 bg-[#dbdad4] border border-[#dbdad4] rounded-lg shadow"
       >
-        Hello, I'm Hyejee
-      </h2>
-      <p class="mb-4 text-md text-gray-800">
-        I'm Hyejee, also known as HedgeHour, the web development enthusiast.
-        While I'm relatively new to the field, I offer a fresh perspective and a
-        strong desire to learn and innovate. As a novice web developer, I've
-        already crafted functional and visually appealing websites and
-        applications. I'm a team player, eager to collaborate and enhance my
-        skills through colleagues' insights.
-      </p>
+        <h5 class="mb-4 text-4xl font-extrabold tracking-tight text-gray-900">
+          Hello, I'm Hyejee
+        </h5>
+        <p class="mb-4 font-normal text-gray-700">
+          I'm Hyejee, also known as HedgeHour, the web development enthusiast.
+          While I'm relatively new to the field, I offer a fresh perspective and
+          a strong desire to learn and innovate. As a novice web developer, I've
+          already crafted functional and visually appealing websites and
+          applications. I'm a team player, eager to collaborate and enhance my
+          skills through colleagues' insights.
+        </p>
+        <p class="text-md text-gray-800">
+          With over 5 years of experience in the IT field, I bring a unique
+          fusion of technical expertise and business acumen to the table. My
+          proficiency in software development enables me to seamlessly bridge
+          the gap between technology and business strategy, consistently
+          achieving successful outcomes. I excel at transforming intricate data
+          into actionable insights and crafting user-friendly solutions. Beyond
+          that, my unwavering commitment extends to incorporating the latest
+          cybersecurity techniques, ensuring the utmost safety and security of
+          client data in all solutions. As a creative problem-solver and
+          effective communicator, I take pride in consistently surpassing
+          expectations, delivering results that embody innovation and
+          excellence.
+        </p>
+      </a>
     </div>
 
     <div class="relative flex items-flexstart justify-center">
@@ -36,28 +52,12 @@ import Skills from "./Skills.astro";
             checked
           />
           <label
-            class="flex justify-center cursor-pointer rounded-full border border-gray-300 bg-white py-2 px-4 hover:bg-gray-50 focus:outline-none peer-checked:border-transparent peer-checked:ring-2 peer-checked:ring-[#88560f] transition-all duration-500 ease-in-out"
+            class="flex justify-center cursor-pointer rounded-full border border-gray-400 bg-white py-2 px-4 hover:bg-[#9e4b45] focus:outline-none peer-checked:border-transparent peer-checked:ring-2 peer-checked:ring-[#9e4b45] hover:text-white transition-all duration-300 ease-in-out"
             for="yes">Profile</label
           >
 
           <AboutMeCard>
-            <p class="text-md text-gray-800">
-              With over 5 years of experience in the IT field, I bring a
-              unique fusion of technical expertise and business acumen to the
-              table. My proficiency in software development enables me to
-              seamlessly bridge the gap between technology and business
-              strategy, consistently achieving successful outcomes. I excel at
-              transforming intricate data into actionable insights and
-              crafting user-friendly solutions. Beyond that, my unwavering
-              commitment extends to incorporating the latest cybersecurity
-              techniques, ensuring the utmost safety and security of client
-              data in all solutions. As a creative problem-solver and
-              effective communicator, I take pride in consistently surpassing
-              expectations, delivering results that embody innovation and
-              excellence.
-            </p>
             <div class="item-center grid grid-cols-3 gap-8 px-10 py-10">
-              
               <AboutMeIcon>
                 <svg
                   class="justify-center w-[43px] h-[43px] text-[#0d4048]"
@@ -135,7 +135,7 @@ import Skills from "./Skills.astro";
               id="no"
             />
             <label
-              class="flex justify-center cursor-pointer rounded-full border border-gray-300 bg-white py-2 px-4 hover:bg-gray-50 focus:outline-none peer-checked:border-transparent peer-checked:ring-2 peer-checked:ring-[#88560f] transition-all duration-500 ease-in-out"
+              class="flex justify-center cursor-pointer rounded-full border border-gray-400 bg-white py-2 px-4 hover:bg-[#9e4b45] focus:outline-none peer-checked:border-transparent peer-checked:ring-2 peer-checked:ring-[#9e4b45] hover:text-white transition-all duration-300 ease-in-out"
               for="no">Education</label
             >
 
@@ -187,7 +187,7 @@ import Skills from "./Skills.astro";
               id="yesno"
             />
             <label
-              class="flex justify-center cursor-pointer rounded-full border border-gray-300 bg-white py-2 px-4 hover:bg-gray-50 focus:outline-none peer-checked:border-transparent peer-checked:ring-2 peer-checked:ring-[#88560f] transition-all duration-500 ease-in-out"
+              class="flex justify-center cursor-pointer rounded-full border border-gray-400 bg-white py-2 px-4 hover:bg-[#9e4b45] focus:outline-none peer-checked:border-transparent peer-checked:ring-2 peer-checked:ring-[#9e4b45] hover:text-white transition-all duration-300 ease-in-out"
               for="yesno">Skills</label
             >
             <AboutMeCard>
@@ -197,5 +197,7 @@ import Skills from "./Skills.astro";
         </li>
       </ul>
     </div>
+    
+    
   </div>
 </section>

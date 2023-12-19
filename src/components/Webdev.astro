@@ -1,3 +1,10 @@
+---
+import { Image } from "astro:assets";
+import results from "../assets/results.jpg";
+import SkillsList from "./SkillsList.astro";
+import IconsList from "./icons.astro";
+---
+
 <section class="bg-[#dee2e4]">
   <div
     class="grid max-w-screen-xl px-4 py-10 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12"
@@ -6,8 +13,17 @@
       <h1
         class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl"
       >
-        Website Portfolio Project
+        Website Portfolio ver.1
       </h1>
+
+      <p
+        class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400"
+      >
+        Crafted a dynamic and visually compelling website portfolio, showcasing
+        a diverse range of projects and skills. Designed for optimal user
+        experience, the portfolio reflects a creative and professional identity,
+        emphasizing technical proficiency and a passion for innovation.
+      </p>
     </div>
     <div class="lg:mt-0 lg:col-span-5 lg:flex background-image2">
       <a class="text-[#dee2e4]" href="https://storyset.com/web"
@@ -184,7 +200,7 @@
     </div>
 
     <h2 class="text-4xl font-bold tracking-tight text-[#125767]">Results</h2>
-    <div class="grid md:grid-cols-2 gap-35 mb-10">
+    <div class="grid md:grid-cols-2 gap-35 mb-4">
       <div class="font-normal text-lg text-gray-700">
         <p class="mb-10">
           In this personal project, I took an agile/scrum approach to creating
@@ -206,154 +222,23 @@
           environment and deliver high-quality results within a structured
           project management framework.
         </p>
-        <h2 class="mb-6 text-4xl font-bold tracking-tight text-[#125767]">
-          Technical skills obtained/demonstrated
-        </h2>
-        <ul
-          class="max-w-lg space-y-1 list-disc list-outside font-normal text-gray-700 mb-3 pl-10"
-        >
-          <li>
-            Backend Expertise: Leveraged backend programming skills for the
-            personal portfolio.
-          </li>
-
-          <li>
-            API Integration: Developed an API endpoint using Web3Forms API for
-            secure contact message submissions.
-          </li>
-
-          <li>
-            Email Validation: Integrated WhoisXML API for email validation
-            before processing contact requests.
-          </li>
-
-          <li>
-            Security Enhancement: Implemented Google reCAPTCHA for enhanced
-            security, safeguarding form submissions from malicious bots.
-          </li>
-
-          <li>
-            User Experience Focus: Ensured a seamless user experience throughout
-            the contact process.
-          </li>
-        </ul>
       </div>
-
-      <!-- <div
-        class="relative mx-auto border-gray-800 bg-gray-800 border-[7px] rounded-[2.5rem] h-[300px] w-[150px] shadow-xl"
-      >
-        <div
-          class="w-[74px] h-[5px] bg-gray-800 top-0 rounded-b-[1rem] left-1/2 -translate-x-1/2 absolute"
-        >
-        </div>
-        <div
-          class="h-[15px] w-[4px] bg-gray-800 absolute -start-[9px] top-[62px] rounded-s-lg"
-        >
-        </div>
-        <div
-          class="h-[15px] w-[5px] bg-gray-800 absolute -start-[9px] top-[89px] rounded-s-lg"
-        >
-        </div>
-        <div
-          class="h-[30px] w-[3px] bg-gray-800 absolute -end-[9px] top-[71px] rounded-e-lg"
-        >
-        </div>
-        <div
-          class="rounded-[2rem] overflow-hidden w-[136px] h-[286px] bg-white background-image"
-        >
-        </div> -->
-
-        <div
-          class="relative mx-auto border-gray-800  bg-gray-800 border-[14px] rounded-[2.5rem] h-[454px] max-w-[341px] md:h-[682px] md:max-w-[512px]"
-        >
-          <div
-            class="h-[32px] w-[3px] bg-gray-800  absolute -start-[17px] top-[72px] rounded-s-lg"
-          >
-          </div>
-          <div
-            class="h-[46px] w-[3px] bg-gray-800  absolute -start-[17px] top-[124px] rounded-s-lg"
-          >
-          </div>
-          <div
-            class="h-[46px] w-[3px] bg-gray-800  absolute -start-[17px] top-[178px] rounded-s-lg"
-          >
-          </div>
-          <div
-            class="h-[64px] w-[3px] bg-gray-800  absolute -end-[17px] top-[142px] rounded-e-lg"
-          >
-          </div>
-          <div
-            class="rounded-[2rem] overflow-hidden h-[426px] md:h-[654px] bg-white background-image"
-          >
-            <img
-              src="https://github.com/Hedgehour/portfolio/blob/astro/src/assets/desktop2.png"
-              class=" h-[426px] md:h-[654px]"
-              alt=""
-            />
-           
-          </div>
-        </div>
+      <div class="block">
+        <Image src={results} alt="mockup" />
       </div>
     </div>
     <h2
       class="mb-6 text-4xl font-bold tracking-tight text-center text-[#125767]"
     >
-      Tools & Applications Used
+      Technical Skills Obtained & Tools Used
     </h2>
-    <div class="grid lg:grid-cols-9 md:grid-cols-3 sm:grid-cols-2 gap-4 mb-10">
-      <img
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-plain.svg"
-        height="75px"
-        width="75px"
-      />
+    <div class="grid md:grid-cols-4 gap-12 mb-10">
+      <SkillsList />
 
-      <img
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-        height="75px"
-        width="75px"
-      />
-
-      <img
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trello/trello-plain-wordmark.svg"
-        height="75px"
-        width="75px"
-      />
-
-      <img
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original-wordmark.svg"
-        height="75px"
-        width="75px"
-      />
-
-      <img
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
-        height="75px"
-        width="75px"
-      />
-
-      <img
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-plain.svg"
-        height="75px"
-        width="75px"
-      />
-
-      <img
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-line.svg"
-        height="75px"
-        width="75px"
-      />
-
-      <img
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg"
-        height="75px"
-        width="75px"
-      />
-
-      <img
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg"
-        height="75px"
-        width="75px"
-      />
+      <div class="col-span-2 gap-10 ">
+        <IconsList/>
+        
+      </div>
     </div>
   </div>
 </section>
@@ -374,13 +259,5 @@
     background-size: contain;
     height: 400px;
     width: 400px;
-  }
-</style>
-<style>
-  .background-image3 {
-    background-image: url("../assets/Desktop.png");
-    background-position: right;
-    background-repeat: no-repeat;
-    background-size: contain;
   }
 </style>

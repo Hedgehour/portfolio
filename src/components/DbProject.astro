@@ -1,11 +1,12 @@
 ---
 import { Image } from "astro:assets";
-
+import AnalysisSkill from "../components/AnalysisSkill.astro";
 import erd from "../assets/ERD.png";
 import bar from "../assets/Bar.png";
 import pie from "../assets/Pie.png";
 import scatter from "../assets/ScatterBub.png";
 import area from "../assets/area.png";
+import Tools from "../components/tools.astro";
 ---
 
 <section class="bg-[#d2b48c]">
@@ -193,7 +194,7 @@ import area from "../assets/area.png";
         </p>
       </div>
     </div>
-    
+
     <h2 class="mb-2 mt-10 text-4xl font-bold tracking-tight text-[#125767]">
       Results and Analysis
     </h2>
@@ -203,7 +204,7 @@ import area from "../assets/area.png";
         <Image src={erd} alt="ERD" height={800} width={800} />
       </div>
       <div class="font-normal text-lg text-gray-700 col-span-3">
-        <p class=" mt-20 pr-5">
+        <p class="mt-20 pr-5">
           I took on the task of designing and implementing numerous many-to-many
           tables, a critical step that allowed me to effectively represent
           complex data relationships in line with our project's objectives.
@@ -216,7 +217,7 @@ import area from "../assets/area.png";
     </div>
     <div class="grid md:grid-cols-6 gap-6 mb-4">
       <div class="font-normal text-lg text-gray-700 col-span-3">
-        <p class=" mt-28 pr-5">
+        <p class="mt-28 pr-5">
           As part of the project's data analysis phase, I combined multiple
           datasets and wrote SQL queries to extract and present pertinent
           information about anime studios and their production output. This
@@ -262,16 +263,17 @@ import area from "../assets/area.png";
           connecting this metric to the studio responsible for its creation.
           This allowed me to discern which studio, regardless of the number of
           animes they produced, consistently excelled in generating the most
-          popular works in terms of audience reception. <p class="mt-5">The utilization of
-          z-scores in this analysis was paramount for several reasons. Firstly,
-          it standardized both the number of anime produced and the popularity
-          ratings, enabling fair comparisons between studios. This is
-          particularly important when studios vary significantly in their
-          production output or when dealing with different rating scales for
-          popularity. Additionally, z-scores allowed me to identify studios that
-          outperformed or underperformed relative to the overall dataset,
-          providing a robust statistical basis for our findings and ensuring the
-          integrity of our analysis.</p>
+          popular works in terms of audience reception. <p class="mt-5">
+            The utilization of z-scores in this analysis was paramount for
+            several reasons. Firstly, it standardized both the number of anime
+            produced and the popularity ratings, enabling fair comparisons
+            between studios. This is particularly important when studios vary
+            significantly in their production output or when dealing with
+            different rating scales for popularity. Additionally, z-scores
+            allowed me to identify studios that outperformed or underperformed
+            relative to the overall dataset, providing a robust statistical
+            basis for our findings and ensuring the integrity of our analysis.
+          </p>
         </p>
       </div>
       <div class="flex col-span-3 shadow">
@@ -301,46 +303,45 @@ import area from "../assets/area.png";
       </div>
     </div>
     <div class="grid md:grid-cols-6 gap-4 mb-4">
-        <div class="font-normal text-lg text-gray-700 col-span-3">
-            <p class=" pr-5">
-                A significant observation from the chart is that many of the genres are
-                classified as "Mature Themes," and they collectively represent a
-                substantial portion of the anime produced. This suggests that mature and
-                thought-provoking themes are prevalent in the anime industry, and numerous
-                anime productions explore these complex and adult-oriented narratives.
-                While some genres cater to younger audiences and family-friendly themes,
-                the diversity of mature themes highlights the depth and sophistication of
-                storytelling within the world of anime.
-              </p>
-        </div>
-        <p class="text-lg text-gray-700 col-span-3 pr-5">
-            ** Please note that It's important to acknowledge that the chart may not
-            represent the anime industry as a whole. Some anime productions may not be
-            categorized into specific genres, resulting in an underrepresentation of
-            these works. As a result, the chart provides insights into the categorized
-            genre preferences of the industry but may not capture the entirety of
-            anime production. Despite this limitation, the chart remains a valuable
-            tool for understanding the distribution of categorized anime genres,
-            offering valuable insights for enthusiasts and analysts. To gain a
-            comprehensive view of the industry, it may be necessary to consider
-            uncategorized or unclassified anime productions in addition to the genres
-            displayed in the chart.
-          </p>
+      <div class="font-normal text-lg text-gray-700 col-span-3">
+        <p class="pr-5">
+          A significant observation from the chart is that many of the genres
+          are classified as "Mature Themes," and they collectively represent a
+          substantial portion of the anime produced. This suggests that mature
+          and thought-provoking themes are prevalent in the anime industry, and
+          numerous anime productions explore these complex and adult-oriented
+          narratives. While some genres cater to younger audiences and
+          family-friendly themes, the diversity of mature themes highlights the
+          depth and sophistication of storytelling within the world of anime.
+        </p>
       </div>
-   
-      <h2
+      <p class="text-lg text-gray-700 col-span-3 pr-5">
+        ** Please note that It's important to acknowledge that the chart may not
+        represent the anime industry as a whole. Some anime productions may not
+        be categorized into specific genres, resulting in an underrepresentation
+        of these works. As a result, the chart provides insights into the
+        categorized genre preferences of the industry but may not capture the
+        entirety of anime production. Despite this limitation, the chart remains
+        a valuable tool for understanding the distribution of categorized anime
+        genres, offering valuable insights for enthusiasts and analysts. To gain
+        a comprehensive view of the industry, it may be necessary to consider
+        uncategorized or unclassified anime productions in addition to the
+        genres displayed in the chart.
+      </p>
+    </div>
+
+    <h2
       class="mb-6 text-4xl font-bold tracking-tight text-center text-[#125767]"
     >
       Technical Skills Obtained & Tools Used
     </h2>
-    <div class="grid md:grid-cols-4 gap-12 mb-10">
-      
-  
-        <div class="col-span-2 gap-10 ">
-          
-          
-        </div>
+    <div class="grid md:grid-cols-7 gap-20 mb-10">
+      <AnalysisSkill />
+
+      <div class="col-span-4 mt-32 ml-12">
+        <Tools/>
       </div>
+    </div>
   </div>
 </section>
 

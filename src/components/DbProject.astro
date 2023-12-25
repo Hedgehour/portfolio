@@ -1,0 +1,357 @@
+---
+import { Image } from "astro:assets";
+import AnalysisSkill from "../components/AnalysisSkill.astro";
+import erd from "../assets/ERD.png";
+import bar from "../assets/Bar.png";
+import pie from "../assets/Pie.png";
+import scatter from "../assets/ScatterBub.png";
+import area from "../assets/area.png";
+import Tools from "../components/tools.astro";
+---
+
+<section class="bg-[#d2b48c]">
+  <div
+    class="grid max-w-screen-xl px-4 py-10 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12"
+  >
+    <div class="mr-auto place-self-center lg:col-span-7">
+      <h1
+        class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl"
+      >
+        Analyzing Kaggle Dataset Using PostgreSQL and Python
+      </h1>
+
+      <p
+        class="max-w-2xl mb-6 font-light text-gray-600 lg:mb-8 md:text-lg lg:text-xl"
+      >
+        Executed a comprehensive analysis of a Kaggle dataset through the
+        strategic integration of PostgreSQL and Python. Leveraged SQL queries
+        and Python scripting to extract valuable insights, demonstrating
+        proficiency in data manipulation, analysis, and presentation.
+      </p>
+    </div>
+    <div class="lg:mt-0 lg:col-span-5 lg:flex background-image">
+      <a class="text-[#d2b48c]" href="https://storyset.com/business"
+        >Business illustrations by Storyset</a
+      >
+    </div>
+  </div>
+</section>
+<section class="bg-white" id="background">
+  <div
+    class="gap-6 items-inline py-4 px-4 mx-auto max-w-screen-xl grid grid-cols-1 xl:grid-cols-1 md:grid-cols-1"
+  >
+    <h1 class="text-4xl font-bold tracking-tight text-[#125767]">
+      Background & Purpose
+    </h1>
+    <p class="font-normal text-lg text-gray-700 mb-20">
+      Initiated a personal project tailored for learning SQL and mastering
+      database architecture, employing a Kaggle dataset as a sample context. The
+      goal was to leverage SQL skills in designing a robust database structure.
+      This hands-on experience not only deepened my understanding of SQL but
+      also provided practical insights into effective database management using
+      a real-world dataset sourced from Kaggle.
+    </p>
+    <h2 class="text-4xl font-bold tracking-tight text-center text-[#125767]">
+      My Process and Components
+    </h2>
+    <div class="grid md:grid-cols-5 gap-8 mb-10">
+      <div class="bg-gray-50 border border-gray-200 rounded-lg p-3 shadow">
+        <a
+          class="bg-pink-100 inline-flex justify-center px-2.5 py-0.5 rounded-md"
+        >
+          <svg
+            class="w-[30px] h-[30px] text-gray-800"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 20 20"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"></path>
+          </svg>
+        </a>
+        <h2 class="text-gray-900 text-2xl font-extrabold mb-2">Define</h2>
+        <p class="text-md font-normal text-gray-500 mb-4">
+          Researched various sample datasets related to anime production and
+          started defining parameters related to animated TV shows and the
+          initial questions/hypothesis.
+        </p>
+      </div>
+      <div class="bg-gray-50 border border-gray-200 rounded-lg p-3 shadow">
+        <a
+          class="bg-yellow-100 inline-flex items-center px-2.5 py-0.5 rounded-md"
+        >
+          <svg
+            class="w-[30px] h-[30px] text-gray-800"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 18 20"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="m7.708 2.292.706-.706A2 2 0 0 1 9.828 1h6.239A.97.97 0 0 1 17 2v12a.97.97 0 0 1-.933 1H15M6 5v4a1 1 0 0 1-1 1H1m11-4v12a.97.97 0 0 1-.933 1H1.933A.97.97 0 0 1 1 18V9.828a2 2 0 0 1 .586-1.414l2.828-2.828A2 2 0 0 1 5.828 5h5.239A.97.97 0 0 1 12 6Z"
+            ></path>
+          </svg>
+        </a>
+        <h2 class="text-gray-900 text-2xl font-extrabold mb-2">Collect</h2>
+        <p class="text-md font-normal text-gray-500 mb-4">
+          Acquired a diverse dataset from Kaggle, and collected relevant data.
+        </p>
+      </div>
+      <div class="bg-gray-50 border border-gray-200 rounded-lg p-3 shadow">
+        <a
+          class="bg-indigo-100 inline-flex items-center px-2.5 py-0.5 rounded-md"
+        >
+          <svg
+            class="w-[30px] h-[30px] text-gray-800"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 18 20"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M17 4c0 1.657-3.582 3-8 3S1 5.657 1 4m16 0c0-1.657-3.582-3-8-3S1 2.343 1 4m16 0v6M1 4v6m0 0c0 1.657 3.582 3 8 3s8-1.343 8-3M1 10v6c0 1.657 3.582 3 8 3s8-1.343 8-3v-6"
+            ></path>
+          </svg>
+        </a>
+        <h2 class="text-gray-900 text-2xl font-extrabold mb-2">Clean</h2>
+        <p class="text-md font-normal text-gray-500 mb-4">
+          I began by cleaning the dataset we obtained from Kaggle to prepare it
+          for import into PGAdmin. This entailed a thorough data cleaning
+          process to ensure the dataset was in a format compatible with the
+          project's database.
+        </p>
+      </div>
+      <div class="bg-gray-50 border border-gray-200 rounded-lg p-3 shadow">
+        <a
+          class="bg-purple-100 inline-flex items-center px-2.5 py-0.5 rounded-md"
+        >
+          <svg
+            class="w-[30px] h-[30px] text-gray-800"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="20"
+            fill="none"
+            viewBox="0 0 16 20"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 1v4a1 1 0 0 1-1 1H1m8.484 7.984 2.152 2.152M15 2v16a.97.97 0 0 1-.933 1H1.933A.97.97 0 0 1 1 18V5.828a2 2 0 0 1 .586-1.414l2.828-2.828A2 2 0 0 1 5.828 1h8.239A.97.97 0 0 1 15 2Zm-4.636 9.864a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+            ></path>
+          </svg>
+        </a>
+        <h2 class="text-gray-900 text-2xl font-extrabold mb-2">Analysis</h2>
+        <p class="text-md font-normal text-gray-500 mb-4">
+          Designed and implemented many-to-many tables for a detailed analysis
+          of complex data relationships. Created an Entity Relationship Diagram
+          (ERD) to visualize the database structure and different data types.
+        </p>
+      </div>
+      <div class="bg-gray-50 border border-gray-200 rounded-lg p-3 shadow">
+        <a
+          class="bg-green-100 inline-flex items-center px-2.5 py-0.5 rounded-md"
+        >
+          <svg
+            class="w-[30px] h-[30px] text-gray-800"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 21 21"
+          >
+            <g
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            >
+              <path d="M9 4.025A7.5 7.5 0 1 0 16.975 12H9V4.025Z"></path>
+              <path
+                d="M12.5 1c-.169 0-.334.014-.5.025V9h7.975c.011-.166.025-.331.025-.5A7.5 7.5 0 0 0 12.5 1Z"
+              ></path>
+            </g>
+          </svg>
+        </a>
+        <h2 class="text-gray-900 text-2xl font-extrabold mb-2">Interpret</h2>
+        <p class="text-md font-normal text-gray-500 mb-4">
+          Meticulously specified table types and structures, interpreting data
+          in alignment with project objectives.
+        </p>
+      </div>
+    </div>
+
+    <h2 class="mb-2 mt-10 text-4xl font-bold tracking-tight text-[#125767]">
+      Results and Analysis
+    </h2>
+
+    <div class="grid md:grid-cols-6 gap-4 mb-4">
+      <div class="block col-span-3 shadow">
+        <Image src={erd} alt="ERD" height={800} width={800} />
+      </div>
+      <div class="font-normal text-lg text-gray-700 col-span-3">
+        <p class="mt-20 pr-5">
+          I took on the task of designing and implementing numerous many-to-many
+          tables, a critical step that allowed me to effectively represent
+          complex data relationships in line with our project's objectives.
+          Throughout this procedure, I meticulously fashioned several tables,
+          specifying their types and defining their structure. Example of an
+          Entity Relationship Diagram can be seen. This illustrates the
+          structure and the different data types.
+        </p>
+      </div>
+    </div>
+    <div class="grid md:grid-cols-6 gap-6 mb-4">
+      <div class="font-normal text-lg text-gray-700 col-span-3">
+        <p class="mt-28 pr-5">
+          As part of the project's data analysis phase, I combined multiple
+          datasets and wrote SQL queries to extract and present pertinent
+          information about anime studios and their production output. This
+          process involved merging datasets, establishing relationships between
+          tables, and crafting SQL queries to generate valuable insights. The
+          result was a comprehensive view of the anime industry, showcasing the
+          various studios and their respective contributions, as visualized
+          through a bar graph. This allowed us to identify key players in the
+          field and gain a deeper understanding of their production histories.
+        </p>
+      </div>
+      <div class="block col-span-3 shadow">
+        <Image src={bar} alt="Bar" height={800} width={800} />
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-6 gap-6 mb-4">
+      <div class="block col-span-3 shadow">
+        <Image src={area} alt="Area" height={800} width={800} />
+      </div>
+      <div class="font-normal text-lg text-gray-700 col-span-3">
+        <p class="mt-20 pr-5">
+          Building upon the foundation of the combined and queried datasets, I
+          expanded the analysis to investigate the annual production trends in
+          the anime industry. To do this, I first needed to clean the data by
+          removing null values and ensuring a robust dataset for the analysis.
+          Subsequently, I crafted SQL queries to group and count the number of
+          anime productions by year. This allowed us to determine which year
+          witnessed the highest production volume, providing valuable insights
+          into the industry's temporal dynamics. The data cleaning step was
+          pivotal in ensuring the accuracy and reliability of the findings.
+        </p>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-6 gap-4 mb-4">
+      <div class="font-normal text-lg text-gray-700 col-span-3">
+        <p class="pr-5">
+          As part of our comprehensive analysis, I also sought to understand the
+          relationship between the number of anime productions by each studio
+          and the average popularity of their work. To achieve this, I
+          meticulously computed the average popularity rating for each anime,
+          connecting this metric to the studio responsible for its creation.
+          This allowed me to discern which studio, regardless of the number of
+          animes they produced, consistently excelled in generating the most
+          popular works in terms of audience reception. <p class="mt-5">
+            The utilization of z-scores in this analysis was paramount for
+            several reasons. Firstly, it standardized both the number of anime
+            produced and the popularity ratings, enabling fair comparisons
+            between studios. This is particularly important when studios vary
+            significantly in their production output or when dealing with
+            different rating scales for popularity. Additionally, z-scores
+            allowed me to identify studios that outperformed or underperformed
+            relative to the overall dataset, providing a robust statistical
+            basis for our findings and ensuring the integrity of our analysis.
+          </p>
+        </p>
+      </div>
+      <div class="flex col-span-3 shadow">
+        <Image src={scatter} alt="Scatter" height={800} width={800} />
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-6 gap-6 mb-4">
+      <div class="block col-span-3 shadow">
+        <Image src={pie} alt="Pie" height={800} width={800} />
+      </div>
+
+      <div class="font-normal text-lg text-gray-700 col-span-3">
+        <p class="mt-14 pr-5">
+          The pie chart titled "Anime Distribution by Genre" provides a visual
+          representation of the number of anime produced across different
+          genres. It offers a concise overview of how the anime industry is
+          distributed among various genres, helping us understand the popularity
+          of different anime themes. Most Popular Genre: The genre with the
+          largest segment indicates the most popular genre of anime, as it has
+          the highest count of anime productions. Less Common Genres: Smaller
+          segments reveal less common genres, indicating the variety within the
+          anime industry. Genre Diversity: The pie chart illustrates the
+          diversity and richness of anime, as it spans a wide range of genres,
+          each catering to different preferences.
+        </p>
+      </div>
+    </div>
+    <div class="grid md:grid-cols-6 gap-4 mb-4">
+      <div class="font-normal text-lg text-gray-700 col-span-3">
+        <p class="pr-5">
+          A significant observation from the chart is that many of the genres
+          are classified as "Mature Themes," and they collectively represent a
+          substantial portion of the anime produced. This suggests that mature
+          and thought-provoking themes are prevalent in the anime industry, and
+          numerous anime productions explore these complex and adult-oriented
+          narratives. While some genres cater to younger audiences and
+          family-friendly themes, the diversity of mature themes highlights the
+          depth and sophistication of storytelling within the world of anime.
+        </p>
+      </div>
+      <p class="text-lg text-gray-700 col-span-3 pr-5">
+        ** Please note that It's important to acknowledge that the chart may not
+        represent the anime industry as a whole. Some anime productions may not
+        be categorized into specific genres, resulting in an underrepresentation
+        of these works. As a result, the chart provides insights into the
+        categorized genre preferences of the industry but may not capture the
+        entirety of anime production. Despite this limitation, the chart remains
+        a valuable tool for understanding the distribution of categorized anime
+        genres, offering valuable insights for enthusiasts and analysts. To gain
+        a comprehensive view of the industry, it may be necessary to consider
+        uncategorized or unclassified anime productions in addition to the
+        genres displayed in the chart.
+      </p>
+    </div>
+
+    <h2
+      class="mb-6 text-4xl font-bold tracking-tight text-center text-[#125767]"
+    >
+      Technical Skills Obtained & Tools Used
+    </h2>
+    <div class="grid md:grid-cols-7 gap-20 mb-10">
+      <AnalysisSkill />
+
+      <div class="col-span-4 mt-32 ml-12">
+        <Tools/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .background-image {
+    background-image: url("../assets/Research.png");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 400px;
+    width: 400px;
+  }
+</style>

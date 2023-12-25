@@ -1,0 +1,263 @@
+---
+import { Image } from "astro:assets";
+import results from "../assets/results.jpg";
+import SkillsList from "./SkillsList.astro";
+import IconsList from "./icons.astro";
+---
+
+<section class="bg-[#dee2e4]">
+  <div
+    class="grid max-w-screen-xl px-4 py-10 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12"
+  >
+    <div class="mr-auto place-self-center lg:col-span-7">
+      <h1
+        class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl"
+      >
+        Website Portfolio ver.1
+      </h1>
+
+      <p
+        class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl"
+      >
+        Crafted a dynamic and visually compelling website portfolio, showcasing
+        a diverse range of projects and skills. Designed for optimal user
+        experience, the portfolio reflects a creative and professional identity,
+        emphasizing technical proficiency and a passion for innovation.
+      </p>
+    </div>
+    <div class="lg:mt-0 lg:col-span-5 lg:flex background-image2">
+      <a class="text-[#dee2e4]" href="https://storyset.com/web"
+        >Web illustrations by Storyset</a
+      >
+    </div>
+  </div>
+</section>
+
+<section class="bg-white" id="background">
+  <div
+    class="gap-6 items-inline py-4 px-4 mx-auto max-w-screen-xl grid grid-cols-1 xl:grid-cols-1 md:grid-cols-1"
+  >
+    <h1 class="text-4xl font-bold tracking-tight text-[#125767]">
+      Background & Purpose
+    </h1>
+    <p class="font-normal text-lg text-gray-700 mb-20">
+      The purpose of this project was to create a personal portfolio website to
+      showcase my skills and progress as a novice developer. This website will
+      serve as a platform to demonstrate my technical abilities and projects I
+      have completed, as well as provide information about me. As technology
+      continues to play a significant role in many industries, it is important
+      for me to showcase my skills and abilities in programming and my aptitude
+      for learning new skills. A personal portfolio website is a perfect way to
+      do this, as it provides a centralized location to highlight my technical
+      projects and relevant information about myself. Additionally, building a
+      portfolio website from scratch will provide me with the opportunity to
+      learn and apply various programming concepts, tools, and frameworks. The
+      final product will serve as a tangible representation of my growth as a
+      developer and a tool for future job opportunities.
+    </p>
+
+    <h2 class="text-4xl font-bold tracking-tight text-center text-[#125767]">
+      Design Process
+    </h2>
+    <div class="grid md:grid-cols-5 gap-8 mb-10">
+      <div class="bg-gray-50 border border-gray-200 rounded-lg p-3 shadow">
+        <a
+          class="bg-pink-100 inline-flex justify-center px-2.5 py-0.5 rounded-md"
+        >
+          <svg
+            class="w-[30px] h-[30px] text-gray-800"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 20 20"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"></path>
+          </svg>
+        </a>
+        <h2 class="text-gray-900 text-2xl font-extrabold mb-2">Discover</h2>
+        <p class="text-md font-normal text-gray-500 mb-4">
+          Crafting my portfolio, I embraced agile/scrum for flexible, iterative
+          development. Prioritizing key features and goals, I continuously
+          improved. In the discovery phase, I sought design inspiration.
+        </p>
+      </div>
+      <div class="bg-gray-50 border border-gray-200 rounded-lg p-3 shadow">
+        <a
+          class="bg-purple-100 inline-flex items-center px-2.5 py-0.5 rounded-md"
+        >
+          <svg
+            class="w-[30px] h-[30px] text-gray-800"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 20 20"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M15 17v1a.97.97 0 0 1-.933 1H1.933A.97.97 0 0 1 1 18V5.828a2 2 0 0 1 .586-1.414l2.828-2.828A2 2 0 0 1 5.828 1h8.239A.97.97 0 0 1 15 2M6 1v4a1 1 0 0 1-1 1H1m13.14.772 2.745 2.746M18.1 5.612a2.086 2.086 0 0 1 0 2.953l-6.65 6.646-3.693.739.739-3.692 6.646-6.646a2.087 2.087 0 0 1 2.958 0Z"
+            ></path>
+          </svg>
+        </a>
+        <h2 class="text-gray-900 text-2xl font-extrabold mb-2">Define</h2>
+        <p class="text-md font-normal text-gray-500 mb-4">
+          In setting project scope and goals, I defined the project's features
+          and functionality. I also outlined specific learning goals related to
+          programming concepts.
+        </p>
+      </div>
+      <div class="bg-gray-50 border border-gray-200 rounded-lg p-3 shadow">
+        <a
+          class="bg-yellow-100 inline-flex items-center px-2.5 py-0.5 rounded-md"
+        >
+          <svg
+            class="w-[30px] h-[30px] text-gray-800"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            width="14"
+            height="20"
+            fill="none"
+            viewBox="0 0 14 20"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 7a3 3 0 0 1 3-3M5 19h4m0-3c0-4.1 4-4.9 4-9A6 6 0 1 0 1 7c0 4 4 5 4 9h4Z"
+            ></path>
+          </svg>
+        </a>
+        <h2 class="text-gray-900 text-2xl font-extrabold mb-2">Ideate</h2>
+        <p class="text-md font-normal text-gray-500 mb-4">
+          In the ideation phase, I established a product backlog, detailing
+          portfolio requirements with feature descriptions, priorities, and
+          dependencies.
+        </p>
+      </div>
+      <div class="bg-gray-50 border border-gray-200 rounded-lg p-3 shadow">
+        <a
+          class="bg-indigo-100 inline-flex items-center px-2.5 py-0.5 rounded-md"
+        >
+          <svg
+            class="w-[30px] h-[30px] text-gray-800"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 20 20"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 14H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v1M5 19h5m-9-9h5m4-4h8a1 1 0 0 1 1 1v12H9V7a1 1 0 0 1 1-1Zm6 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"
+            ></path>
+          </svg>
+        </a>
+        <h2 class="text-gray-900 text-2xl font-extrabold mb-2">Design</h2>
+        <p class="text-md font-normal text-gray-500 mb-4">
+          In the design phase, I crafted initial design mockups. Employing
+          Trello and the product backlog, I organized work into 1-2 week
+          sprints, focusing on specific feature subsets.
+        </p>
+      </div>
+      <div class="bg-gray-50 border border-gray-200 rounded-lg p-3 shadow">
+        <a
+          class="bg-green-100 inline-flex items-center px-2.5 py-0.5 rounded-md"
+        >
+          <svg
+            class="w-[30px] h-[30px] text-gray-800"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 18 20"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M5 5h8m-1-3a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1m6 0v3H6V2m6 0h4a1 1 0 0 1 1 1v15a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h4m0 9.464 2.025 1.965L12 9.571"
+            ></path>
+          </svg>
+        </a>
+        <h2 class="text-gray-900 text-2xl font-extrabold mb-2">Review</h2>
+        <p class="text-md font-normal text-gray-500 mb-4">
+          I tracked progress, addressed blockers, and planned for the next day.
+          After each sprint, I reviewed and demonstrated results, iterating
+          until all backlog features were completed for the website's launch
+          (e.g., HedgeHour).
+        </p>
+      </div>
+    </div>
+
+    <h2 class="text-4xl font-bold tracking-tight text-[#125767]">Results</h2>
+    <div class="grid md:grid-cols-2 gap-35 mb-4">
+      <div class="font-normal text-lg text-gray-700">
+        <p class="mb-10">
+          In this personal project, I took an agile/scrum approach to creating
+          my personal portfolio website as a demonstration of my ability to work
+          within a team in a real business setting and apply project management
+          principles. By following this method, I aimed to showcase my
+          understanding of agile principles, my ability to work collaboratively
+          towards a common goal, and my understanding of project management
+          concepts such as scope definition, planning, risk management, etc.
+        </p>
+        <p class="mb-10">
+          Throughout the project, I applied the key elements of agile, such as
+          daily stand-ups, sprint planning, and sprint retrospectives, as well
+          as project management techniques such as risk identification and
+          mitigation, project documentation, and progress reporting to ensure
+          that the website was developed efficiently and effectively. The result
+          was a comprehensive personal portfolio website that demonstrates not
+          only my technical skills, but also my ability to work in an agile
+          environment and deliver high-quality results within a structured
+          project management framework.
+        </p>
+      </div>
+      <div class="block">
+        <Image src={results} alt="mockup" />
+      </div>
+    </div>
+    <h2
+      class="mb-6 text-4xl font-bold tracking-tight text-center text-[#125767]"
+    >
+      Technical Skills Obtained & Tools Used
+    </h2>
+    <div class="grid md:grid-cols-4 gap-12 mb-10">
+      <SkillsList />
+
+      <div class="col-span-2 gap-10 ">
+        <IconsList/>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .background-image {
+    background-image: url("../assets/Mobile.png");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+</style>
+<style>
+  .background-image2 {
+    background-image: url("../assets/websiteimg.png");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 400px;
+    width: 400px;
+  }
+</style>

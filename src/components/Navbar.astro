@@ -1,0 +1,90 @@
+---
+const navItems = [
+  { text: "Home", url: "/#home" },
+  { text: "About Me", url: "/#aboutme" },
+  { text: "Experience", url: "/#experience" },
+  { text: "Projects", url: "/#projects" },
+  { text: "Contact", url: "/#contacts" },
+];
+---
+
+<nav class="bg-[#ffffff]" id="navbar">
+  <div
+    class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+  >
+    <a href="/#banner" class="flex items-center space-x-3 rtl:space-x-reverse">
+      <span class="self-center text-2xl font-semibold whitespace-nowrap"
+        >HedgeHour</span
+      >
+    </a>
+    <ul
+      class="md:flex md:items-center z-[-1] md:z-auto md:static absolute w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500"
+    >
+      <li>
+        {
+          navItems.map((item) => (
+            <a
+              href={item.url}
+              class="text-xl mx-4 my-6md:my-0 hover:bg-[#9e4b45] px-2 py-2 rounded-full hover:text-white"
+            >
+              {item.text}
+            </a>
+          ))
+        }
+      </li>
+    </ul>
+    <button
+      id="navbar-toggle"
+      type="button"
+      class="inline-flex md:hidden items-center justify-center p-2 w-10 h-10 text-sm text-gray rounded-lg hover:bg-[#9e4b45] hover:text-white focus:outline-none focus:ring-2 focus:ring-gray-200"
+    >
+      <span class="sr-only">Open main menu</span>
+      <svg
+        class="w-5 h-5"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 17 14"
+      >
+        <path
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M1 1h15M1 7h15M1 13h15"></path>
+      </svg>
+    </button>
+    <div class="hidden w-full" id="navbar-menu">
+      <ul class="flex flex-col font-medium mt-4 rounded-lg">
+        {
+          navItems.map((item) => (
+            <li>
+              <a
+                href={item.url}
+                class="block py-2 px-3 text-black rounded"
+                aria-current="page"
+              >
+                {item.text}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById("navbar-menu");
+    const isHidden = menu?.classList.contains("hidden");
+    if (isHidden) {
+      menu?.classList.remove("hidden");
+    } else {
+      menu?.classList.add("hidden");
+    }
+  }
+
+  const toggle = document.getElementById("navbar-toggle");
+  toggle?.addEventListener("click", toggleMenu);
+</script>

@@ -1,0 +1,344 @@
+---
+import { Image } from "astro:assets";
+import WeatherIcon from "./WeatherIcons.astro";
+import Skills from "./ApiSkills.astro";
+import mockup from "../assets/V4.png";
+import userflow from "../assets/UserFlow.png";
+---
+
+<section class="bg-[#fff9dc]">
+  <div
+    class="grid max-w-screen-xl px-4 py-10 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12"
+  >
+    <div class="mr-auto place-self-center lg:col-span-7">
+      <h1
+        class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl"
+      >
+        Weather App API
+      </h1>
+
+      <p
+        class="max-w-2xl mb-6 font-light text-slate-700 lg:mb-8 md:text-lg lg:text-xl"
+      >
+        Embarking on a journey of exploration and learning, this personal
+        project revolves around creating a dynamic weather application using
+        Python and diving into the intricacies of API development, with a focus
+        on the Open Weather API.
+      </p>
+    </div>
+    <div class="lg:mt-0 lg:col-span-5 lg:flex background-image">
+      <a class="text-[#fff9dc]" href="https://storyset.com/online"
+        >Online illustrations by Storyset</a
+      >
+    </div>
+  </div>
+</section>
+
+<section class="bg-white" id="background">
+  <div
+    class="gap-6 items-inline py-4 px-4 mx-auto max-w-screen-xl grid grid-cols-1 xl:grid-cols-1 md:grid-cols-1"
+  >
+    <h1 class="text-4xl mt-10 font-bold tracking-tight text-[#125767]">
+      Background & Purpose
+    </h1>
+    <p class="font-normal text-lg text-gray-700">
+      Embarking on a phased journey of exploration, this project is envisioned
+      as a multi-stage endeavor to unravel the synergy between APIs and Python
+      in crafting a personalized weather application. In the initial phase, the
+      focus lies on developing a custom API from scratch, utilizing the Open
+      Weather API as a foundational step. This deliberate approach allows for a
+      deep dive into API intricacies, data retrieval, and processing. <p>
+        As the API phase concludes, attention will shift to the second stage —
+        the frontend design of the weather application. This phase aims to
+        leverage Python's versatility for creating an intuitive and visually
+        appealing user interface. User experience will be prioritized, with
+        elements such as location input, data visualization, and customization
+        options taking center stage.
+      </p>
+      <p>
+        The final culmination of this phased approach will be the creation of a
+        fully customized weather app, seamlessly integrating the backend API
+        with a thoughtfully designed frontend. The app will not only provide
+        accurate and real-time weather information but also stand as a testament
+        to the cumulative learning acquired throughout the project. Motivated by
+        a genuine curiosity for technology and meteorology, this phased
+        exploration seeks not only to comprehend the technical intricacies of
+        APIs and Python but also to showcase the evolution from foundational API
+        development to the creation of a comprehensive, user-centric weather
+        application. The project unfolds as a deliberate and iterative process,
+        highlighting the transformative potential embedded in each phase.
+      </p>
+    </p>
+
+    <h2
+      class="text-4xl mt-10 font-bold tracking-tight text-center text-[#125767]"
+    >
+      Design Process
+    </h2>
+    <div class="grid md:grid-cols-5 gap-8">
+      <div class="bg-gray-50 border border-gray-200 rounded-lg p-3 shadow">
+        <a
+          class="bg-pink-100 inline-flex justify-center px-2.5 py-0.5 rounded-md"
+        >
+          <svg
+            class="w-[30px] h-[30px] text-gray-800"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 20 20"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"></path>
+          </svg>
+        </a>
+        <h2 class="text-gray-900 text-2xl font-extrabold mb-2">Discover</h2>
+        <p class="text-md font-normal text-gray-500 mb-4">
+          Understand the problem space, project goals, and user needs:<ul
+            class="list-disc ml-2 text-gray-500"
+          >
+            <li>Research existing weather applications and APIs.</li>
+            <li>user preferences and expectations.</li>
+            <li>
+              Explore the capabilities and limitations of the Open Weather API.
+            </li>
+            <li>
+              Gather insights into the technical requirements and challenges.
+            </li>
+          </ul>
+        </p>
+      </div>
+      <div class="bg-gray-50 border border-gray-200 rounded-lg p-3 shadow">
+        <a
+          class="bg-purple-100 inline-flex items-center px-2.5 py-0.5 rounded-md"
+        >
+          <svg
+            class="w-[30px] h-[30px] text-gray-800"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 20 20"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M15 17v1a.97.97 0 0 1-.933 1H1.933A.97.97 0 0 1 1 18V5.828a2 2 0 0 1 .586-1.414l2.828-2.828A2 2 0 0 1 5.828 1h8.239A.97.97 0 0 1 15 2M6 1v4a1 1 0 0 1-1 1H1m13.14.772 2.745 2.746M18.1 5.612a2.086 2.086 0 0 1 0 2.953l-6.65 6.646-3.693.739.739-3.692 6.646-6.646a2.087 2.087 0 0 1 2.958 0Z"
+            ></path>
+          </svg>
+        </a>
+        <h2 class="text-gray-900 text-2xl font-extrabold mb-2">Define</h2>
+        <p class="text-md font-normal text-gray-500 mb-4">
+          Clearly define the scope, features, and constraints of the weather app
+          project.<ul class="list-disc ml-2 text-gray-500">
+            <li>Specify the core functionalities of the app.</li>
+            <li>
+              Define user requirements, including preferred locations, units,
+              and additional features.
+            </li>
+            <li>
+              Set constraints, such as the use of specific technologies or
+              frameworks.
+            </li>
+            <li>Identify potential risks and challenges.</li>
+          </ul>
+        </p>
+      </div>
+      <div class="bg-gray-50 border border-gray-200 rounded-lg p-3 shadow">
+        <a
+          class="bg-yellow-100 inline-flex items-center px-2.5 py-0.5 rounded-md"
+        >
+          <svg
+            class="w-[30px] h-[30px] text-gray-800"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            width="14"
+            height="20"
+            fill="none"
+            viewBox="0 0 14 20"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 7a3 3 0 0 1 3-3M5 19h4m0-3c0-4.1 4-4.9 4-9A6 6 0 1 0 1 7c0 4 4 5 4 9h4Z"
+            ></path>
+          </svg>
+        </a>
+        <h2 class="text-gray-900 text-2xl font-extrabold mb-2">Ideate</h2>
+        <p class="text-md font-normal text-gray-500 mb-4">
+          Generate creative solutions and explore different approaches. <ul
+            class="list-disc ml-2 text-gray-500"
+          >
+            <li>Brainstorm ideas for the backend API architecture.</li>
+            <li>
+              Explore various Python libraries and frameworks for both the
+              backend and frontend.
+            </li>
+            <li>
+              Consider different ways to visualize and present weather data.
+            </li>
+            <li>Generate ideas for user interaction and customization.</li>
+          </ul>
+        </p>
+      </div>
+      <div class="bg-gray-50 border border-gray-200 rounded-lg p-3 shadow">
+        <a
+          class="bg-indigo-100 inline-flex items-center px-2.5 py-0.5 rounded-md"
+        >
+          <svg
+            class="w-[30px] h-[30px] text-gray-800"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 20 20"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 14H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v1M5 19h5m-9-9h5m4-4h8a1 1 0 0 1 1 1v12H9V7a1 1 0 0 1 1-1Zm6 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"
+            ></path>
+          </svg>
+        </a>
+        <h2 class="text-gray-900 text-2xl font-extrabold mb-2">Design</h2>
+        <p class="text-md font-normal text-gray-500 mb-4">
+          Develop detailed plans for both the backend API and frontend UI.<ul
+            class="list-disc ml-2 text-gray-500"
+          >
+            <li>Design the API structure, endpoints, and data flow.</li>
+            <li>Plan the user interface layout and navigation.</li>
+            <li>
+              Choose the technology stack for backend and frontend development.
+            </li>
+            <li>Create wireframes or prototypes for the app's screens.</li>
+          </ul>
+        </p>
+      </div>
+      <div class="bg-gray-50 border border-gray-200 rounded-lg p-3 shadow">
+        <a
+          class="bg-green-100 inline-flex items-center px-2.5 py-0.5 rounded-md"
+        >
+          <svg
+            class="w-[30px] h-[30px] text-gray-800"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 18 20"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M5 5h8m-1-3a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1m6 0v3H6V2m6 0h4a1 1 0 0 1 1 1v15a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h4m0 9.464 2.025 1.965L12 9.571"
+            ></path>
+          </svg>
+        </a>
+        <h2 class="text-gray-900 text-2xl font-extrabold mb-2">Review</h2>
+        <p class="text-md font-normal text-gray-500 mb-4">
+          Evaluate the proposed designs and gather feedback.<ul
+            class="list-disc ml-2 text-gray-500"
+          >
+            <li>
+              Conduct a review of the API design, ensuring it aligns with
+              project goals and technical requirements.
+            </li>
+            <li>
+              Review the user interface designs for usability and aesthetics.
+            </li>
+            <li>
+              Share the proposed designs with stakeholders or potential users
+              for feedback.
+            </li>
+            <li>Iterate on the designs based on the feedback received.</li>
+          </ul>
+        </p>
+      </div>
+    </div>
+
+    <h2
+      class="text-4xl mt-10 font-bold text-center tracking-tight text-[#125767]"
+    >
+      User Flow Chart
+    </h2>
+    <div class="flex">
+      <Image src={userflow} alt="userflow" />
+    </div>
+    <h2 class="text-4xl font-bold tracking-tight mt-10 text-[#125767]">
+      Initial Planning & Concept
+    </h2>
+    <div class="grid md:grid-cols-6 gap-8">
+      <div class="font-normal col-span-3 text-md text-gray-700">
+        <p
+          class="mb-5 bg-rose-50 border border-rose-200 rounded-lg p-3 shadow"
+        >
+          Embarking on this personal project, my primary objective extends
+          beyond the mere creation of a weather app; it is a strategic
+          exploration into the intricacies of API integration and Python
+          application development. The overarching goal is to build a practical
+          understanding of how APIs and Python can collaboratively create
+          impactful applications, enhancing my programming skills in the
+          process. Rigorously testing the custom API in Postman ensures its
+          reliability and functionality under various scenarios, contributing to
+          the project's robustness.
+        </p>
+        <p class="mb-5 bg-lime-50 border border-lime-200 rounded-lg p-3 shadow">
+          Having solidified the API foundation, the next logical step involves
+          seamlessly integrating UI components into the weather app. This phase
+          centers on designing an intuitive and visually appealing interface
+          using Python, aiming to create a user-friendly platform for accessing
+          real-time weather data. As the project progresses, the focus remains
+          on continuous learning, experimentation, and the pragmatic fusion of
+          API and Python capabilities.
+        </p>
+        <p
+          class="text-gray-700 bg-sky-50 border border-sky-200 rounded-lg p-3 shadow"
+        >
+          This project represents more than a conventional development venture;
+          it is a methodical journey of skill enhancement and technical
+          exploration. Emphasizing continuous improvement, the joy derived from
+          crafting a meaningful solution arises from the practical integration
+          of API and Python functionalities. This project stands as a testament
+          to the belief that the process of creation is as significant as the
+          end result, offering an in-depth exploration of technology and
+          enriching my skills and understanding at each step.
+        </p>
+        
+      </div>
+      <div class="block mt-28 col-span-3 justify-center">
+        <Image src={mockup} alt="mockup" />
+      </div>
+    </div>
+
+    <h2
+      class="mt-10 mb-10 text-4xl font-bold tracking-tight text-center text-[#125767]"
+    >
+      Technical Skills Obtained & Tools Used
+    </h2>
+    <div class="grid md:grid-cols-4 gap-12 mb-10">
+      <Skills />
+
+      <div class="col-span-2 justify-center mt-10 gap-10">
+        <WeatherIcon />
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .background-image {
+      background-image: url("../assets/API.png");
+      background-position: right;
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 400px;
+      width: 400px;
+    }
+  </style>
+</section>

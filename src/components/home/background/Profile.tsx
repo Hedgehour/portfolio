@@ -7,7 +7,7 @@ export const Profile = () => (
       <BackgroundIcon
         text={() => (
           <h3 class="text-lg font-semibold text-gray-900 text-center leading-tight">
-            5+ years of expereince
+            8+ years of expereince
           </h3>
         )}
       >

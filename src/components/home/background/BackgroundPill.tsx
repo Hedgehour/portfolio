@@ -18,9 +18,9 @@ export const BackgroundPill: Component<BackgroundPillProps> = (props) => {
     <label
       onClick={handleClick}
       classList={{
-        "flex justify-center cursor-pointer rounded-full border border-gray-400 bg-white py-2 px-4 hover:bg-[#9e4b45] focus:outline-none hover:text-white transition-all duration-300 ease-in-out":
+        "flex justify-center cursor-pointer rounded-full border border-gray-400 bg-white py-2 px-4 hover:bg-[#73a8a4] focus:outline-none hover:text-white transition-all duration-300 ease-in-out":
           true,
-        "border-transparent ring-2 ring-[#9e4b45]": section() === props.value,
+        "border-transparent ring-2 ring-[#73a8a4]": section() === props.value,
       }}
     >
       {props.value}

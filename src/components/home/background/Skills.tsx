@@ -3,7 +3,7 @@ import { BackgroundIcon } from "./BackgroundIcon";
 
 export const Skills = () => (
   <BackgroundCard>
-    <div class="bg-white p-5">
+    <div class="bg-[#dae2db] p-5">
       <div class="mx-auto grid gap-x-8 gap-y-8">
         <ul
           role="list"

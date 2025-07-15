@@ -1,39 +1,77 @@
 <section class="bg-white background-image" id="home">
   <div
-    class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6"
+    class="gap-16 items-center py-4 px-4 mx-auto max-w-screen-xl grid grid-cols-1 lg:grid-cols-2"
   >
-    <div class=" grid-cols-1  mt-12  ">
-      <h1
-        class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight  text-black leading-none md:text-5xl xl:text-6xl"
-      >
-        Hyejee Ellis
-      </h1>
-      <p
-        class="max-w-2xl mb-12 font-light align-right text-gray-600 lg:mb-14 md:text-lg lg:text-xl"
-      >
-        Decoding business trends, shaping digital gems—I've evolved into a force
-        in web development, infusing projects with strategic acumen for
-        impactful online experiences.
-       
-      </p>
-      
-    
+    <div class="font-light text-gray-500 sm:text-lg">
       <a
+        class="block w-full max-w-3xl mt-10 mx-auto p-8 bg-[#f5f6f5] border border-[#f8f2ee] rounded-[3rem] shadow-xl"
+      >
+        <h1
+          class="max-w-2xl mb-4 text-lg font-extrabold tracking-tight text-black leading-none md:text-5xl xl:text-6xl"
+        >
+          Hyejee Ellis
+        </h1>
+        <p class="mb-4 font-normal text-gray-700">
+          I'm Hyejee, also known as HedgeHour, the web development enthusiast.
+          While I'm relatively new to the field, I offer a fresh perspective and
+          a strong desire to learn and innovate. As a novice web developer, I've
+          already crafted functional and visually appealing websites and
+          applications. I'm a team player, eager to collaborate and enhance my
+          skills through colleagues' insights.
+        </p>
+        <p class="text-md text-gray-800">
+          With over 8 years of experience in the IT field, I bring a unique
+          fusion of technical expertise and business acumen to the table. My
+          proficiency in software development enables me to seamlessly bridge
+          the gap between technology and business strategy, consistently
+          achieving successful outcomes. I excel at transforming intricate data
+          into actionable insights and crafting user-friendly solutions. Beyond
+          that, my unwavering commitment extends to incorporating the latest
+          cybersecurity techniques, ensuring the utmost safety and security of
+          client data in all solutions.
+        </p>
+      </a>
+    </div>
+  </div>
+  <div
+    class="gap-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6"
+  >
+    <a
       href="#contacts"
-      class="inline-flex items-center justify-center px-2 py-2 text-base font-medium text-center text-gray-900 border hover:text-white border-gray-300 rounded-full hover:bg-[#9e4b45] focus:ring-4 focus:ring-gray-100"
+      class="inline-flex items-center justify-center gap-2 px-4 py-2 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-full hover:bg-[#73a8a4] hover:text-white focus:ring-4 focus:ring-gray-100 transition group"
     >
       Let's Connect
+      <svg
+        class="w-5 h-5 text-gray-800 group-hover:translate-x-1 transition-transform duration-200"
+        fill="none"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M19 12H5m14 0-4 4m4-4-4-4"></path>
+      </svg>
     </a>
-    </div>
-   
   </div>
 </section>
 
 <style>
-  .background-image {
-    background-image: url("../../assets/bio3.jpeg");
-    background-position: right;
-    background-repeat: no-repeat;
-    background-size: contain;
+  @tailwind utilities;
+
+  @layer utilities {
+    .background-image {
+      background-image: url("../../assets/bio3.jpeg");
+      background-position: right;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    @screen md {
+      .background-image {
+        background-position: 130%;
+      }
+    }
   }
 </style>
